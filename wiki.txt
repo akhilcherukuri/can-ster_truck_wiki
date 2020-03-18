@@ -244,31 +244,103 @@ Gitlab Project Link - [https://gitlab.com/...]\
 
 <BR/>
 
-== Parts List & Cost ==\
-\{| class="wikitable"\
-|-\
-! scope="col"| Item#\
-! scope="col"| Part Desciption\
-! scope="col"| Vendor\
-! scope="col"| Qty\
-! scope="col"| Cost\
-|-\
-! scope="row"| 1\
-| RC Car \
-| Traxxas\
-| 1\
-| $250.00\
-|-\
-! scope="row"| 2\
-| CAN Transceivers MCP2551-I/P\
-| Microchip [http://www.microchip.com/wwwproducts/en/en010405]\
-| 8\
-| Free Samples\
-|-\
-|\}\
-\
-<HR>\
-<BR/>\
+== '''Bill Of Materials''' ==
+{| class="wikitable" style="width: 100%;"
+|-
+! scope="col"| Item#
+! scope="col"| Part Desciption
+! scope="col"| Part Model & Vendor
+! scope="col"| Quantity
+! scope="col"| Cost in USD
+|-
+! scope="row"| 1
+| Microcontroller Boards
+| SJ2 LPC 1758 (Purchased from Preet Kang)
+| 5
+| $250.00
+|-
+! scope="row"| 2
+| CAN Transceivers 
+| [https://www.waveshare.com/sn65hvd230-can-board.htm  Waveshare SN65HVD230]
+| 12
+| $54.48
+|-
+! scope="row"| 3
+| RC Car 
+| [https://www.amazon.com/Traxxas-Slash-Course-2-4GHZ-Vehicle/dp/B01DU474B0/ref=sr_1_3?ie=UTF8&qid=1474747759&sr=8-3&keywords=Traxxas+1%2F10+slash+2wd   Traxxas 2WD RTR with 2.4Ghz Radio]
+| 1
+| $260.00
+|-
+! scope="row"| 4
+| Lithium-Ion Battery
+| [https://www.rcsuperstore.com/traxxas-7600mah-2s-7-4v-25c-id-lipo-battery-pack/  Traxxas 7600mAh 2S 7.4V 25C iD LiPo Battery Pack]
+| 1
+| $75.00
+|-
+! scope="row"| 5
+| Lithium-Ion Battery Charger
+| [https://www.amazon.com/Traxxas-2970-EZ-Peak-Charger-Identification/dp/B00OAFYLJC/ref=pd_bxgy_21_img_2?ie=UTF8&psc=1&refRID=JVX791WVV9Y8T9DW92KW Traxxas 2970 EZ-Peak Plus 4-Amp NiMH/LiPo Fast Charger]
+| 1
+| $50.00
+|-
+! scope="row"| 6
+| Compass Breakout Board
+| [https://www.dfrobot.com/product-1275.html  DFRobot CMPS11 Compass]
+| 1
+| $29.99
+|-
+! scope="row"| 7
+| Bluetooth Breakout Board
+| [https://www.amazon.com/HC-05-Bluetooth-Pass-through-Wireless-Communication/dp/B01G9KSAF6/ref=sr_1_4?ie=UTF8&qid=1507077325&sr=8-4&keywords=arduino+bluetooth+hc-05  DSD TECH Bluetooth HC-05]
+| 1
+| $8.49
+|-
+! scope="row"| 8
+| LIDAR Sensor
+| [https://www.amazon.com/RPLiDAR-A1M8-Degree-Laser-Scanner/dp/B07H7X3SFF/ref=sr_1_fkmrnull_1?crid=2FSUI76G4UA8K&keywords=rplidar+a1m8+-+360+degree+laser+scanner+development+kit&qid=1552764172&s=gateway&sprefix=RPlidar%2Caps%2C263&sr=8-1-fkmrnull SEEED STUDIO RPLIDAR A1M8]
+| 1
+| $109.99
+|-
+! scope="row"| 9
+| RPM Sensor
+| [https://www.amazon.com/Traxxas-6520-RPM-Sensor-long/dp/B006IRXEZM  Traxxas 6520 RPM Sensor]
+| 1
+| $13.70
+|-
+! scope="row"| 10
+| GPS Breakout Board
+| 
+| 1
+| $
+|-
+! scope="row"| 11
+| GPS Antenna  
+| 
+| 1
+| $
+|-
+! scope="row"| 12
+| LCD Display
+| [https://4dsystems.com.au/ulcd-32ptu 4Dsystems 3.2 TFT-LCD ULCD-32PTU]
+| 1
+| $79.00
+|-
+! scope="row"| 13
+| Ultrasonic Sensors
+| 
+| 1 (Required:3)
+| $
+|-
+! scope="row"| 14
+| Miscellaneous 
+| 
+| 1
+| $
+|-
+|}
+
+<BR/>
+
 == Printed Circuit Board  ==\
 <Picture and information, including links to your PCB>\
 <br>\
