@@ -50,36 +50,200 @@ Gitlab Project Link - [https://gitlab.com/...]\
 \
 <HR>\
 <BR/>\
-== Schedule ==\
-\
-\
-\{| class="wikitable"\
-|-\
-! scope="col"| Week#\
-! scope="col"| Start Date\
-! scope="col"| End Date\
-! scope="col"| Task\
-! scope="col"| Status\
-|-\
-! scope="row"| 1\
-| 09/15/2017\
-| 09/16/2017\
-|\
-* Read previous projects, gather information and discuss among the group members.\
-* Distribute modules to each team member.\
-\
-| Completed\
-|-\
-! scope="row"| 2\
-| 09/17/2017\
-| 10/03/2017\
-|\
-|\
-|-\
-|\}\
-\
-<HR>\
-<BR/>\
+== '''Schedule''' ==
+
+
+{| class="wikitable" style="width: 100%;"
+|-
+! scope="col"| Week#
+! scope="col"| Start Date
+! scope="col"| End Date
+! scope="col"| Task
+! scope="col"| Status
+|-
+
+! scope="row"| 1
+| style="text-align:center;" |02/11/2020
+| style="text-align:center;" |02/17/2020
+|
+*Form teams and decide group name
+*Review past projects
+*Create Slack group and invite Preet
+*Create groups Gitlab repository
+*Analysis of component required
+
+| 
+*<font color="green">Completed<font>
+*Completed
+*Completed
+*Completed
+*Completed
+|-
+
+! scope="row"| 2
+| style="text-align:center;" |02/18/2020
+| style="text-align:center;" |02/24/2020
+|
+*Study CAN Communication
+*Create Bill of Materials
+*Order RC Car 
+|
+*<font color="green">Completed<font>
+*Completed
+*Completed
+|-
+
+! scope="row"| 3
+| style="text-align:center;" |02/25/2020
+| style="text-align:center;" |03/02/2020
+|
+*Setup team finance management using Splitwise
+*Complete Bill of Materials
+*Order all other required components
+|
+*<font color="green">Completed<font>
+*Completed
+*Completed
+|-
+
+! scope="row"| 4
+| style="text-align:center;" |03/03/2020
+| style="text-align:center;" |03/09/2020
+|
+*Read the respective datasheets and manuals for each component
+*Test each component for working conditions
+|
+*<font color="green">Completed<font>
+*Completed
+|-
+
+! scope="row"| 5
+| style="text-align:center;" |03/10/2020
+| style="text-align:center;" |03/16/2020
+|
+*Assign team responsibilities and roles
+*Setup team project management environmnet 
+*Define CAN DBC
+*<font color="green">Android: Environmental setup of Android Studio and Enable Version Control</font>
+*<font color="brown">Hardware : Decide PCB Editing Software (Kicad vs Eagle)</font>
+*<font color="brown">Hardware : Draft schematic for required PCB design</font>
+|
+*<font color="green">Completed<font>
+*Completed
+*Completed
+*Completed
+*<font color="red">Pending</font>
+*<font color="red">Pending</font>
+|-
+
+! scope="row"| 6
+| style="text-align:center;" |03/17/2020
+| style="text-align:center;" |03/23/2020
+|
+*<font color="brown">Hardware : Create CAD model of PCB </font>
+*<font color="brown">Hardware : Create 3D models for RC mounts </font>
+*Establish final wiki schedule
+*<font color="green">Android: Add a TextView for displaying the Bluetooth connection status in the application.</font>
+*Complete high-level system block diagram
+|
+*<font color="red">Pending<font>
+*Pending
+*Pending
+*Pending
+*Pending
+*Pending
+|-
+
+! scope="row"| 7
+| style="text-align:center;" |03/24/2020
+| style="text-align:center;" |03/30/2020
+|
+*<font color="brown">Hardware : Analyze PCB Model </font>
+*Explore UI designing of LCD
+*<font color="green">Android: Initiate Bluetooth Communication and Send "Hello World".</font>
+
+|
+*<font color="red">Pending<font>
+*Pending
+*Pending
+|-
+
+! scope="row"| 8
+| style="text-align:center;" |03/31/2020
+| style="text-align:center;" |04/06/2020
+|
+*<font color="brown">Hardware : Order PCB Circuit board </font>
+*<font color="brown">Hardware : 3D print out mount modules </font>
+*<font color="green">Android: Embed Google Maps API for setting the car's destination.</font>
+
+|
+*<font color="red">Pending<font>
+*Pending
+*Pending
+|-
+
+! scope="row"| 9
+| style="text-align:center;" |04/07/2020
+| style="text-align:center;" |04/13/2020
+|
+*<font color="brown">Hardware: Remove Unused parts from RC Car </font>
+*<font color="brown">Hardware: Mount PCB and 3D Parts </font>
+*<font color="green">Android: Send car location to the app and checkpoints received to Geo module</font>
+
+|
+*<font color="red">Pending<font>
+*Pending
+*Pending
+|-
+
+! scope="row"| 10
+| style="text-align:center;" |04/14/2020
+| style="text-align:center;" |04/20/2020
+|
+*<font color="brown">Hardware: Integrate all Hardware Modules </font>
+
+|
+*<font color="red">Pending<font>
+|-
+
+! scope="row"| 11
+| style="text-align:center;" |04/21/2020
+| style="text-align:center;" |04/27/2020
+|
+*Software: Continuously test the whole system
+*Finalize RC Car For Project Proto 1
+|
+*<font color="red">Pending<font>
+*Pending
+|-
+
+! scope="row"| 12
+| style="text-align:center;" |04/28/2020
+| style="text-align:center;" |05/04/2020
+|
+*April 28th: Project Proto 1
+*Finalize RC Car for Project Demo
+*May 1st: Project Presentation
+*Finalize RC Car for Project Proto 2
+|
+*<font color="red">Pending<font>
+*Pending
+|-
+
+! scope="row"| 13
+| style="text-align:center;" |05/14/2020
+| style="text-align:center;" |05/21/2020
+|
+* Complete Individual Contribution Peer Grading
+* Review and Complete Wiki Project Page
+|
+*<font color="red">Pending<font>
+*Pending
+|-
+|}
+
+<BR/>
+
 == Parts List & Cost ==\
 \{| class="wikitable"\
 |-\
