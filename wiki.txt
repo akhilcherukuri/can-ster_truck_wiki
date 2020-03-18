@@ -1,0 +1,234 @@
+== Project Title ==\
+<Team Name>\
+\
+<HR>\
+<BR/>\
+== Abstract ==\
+<2-3 sentence abstract>\
+\
+=== Introduction ===\
+\
+The project was divided into N modules:\
+\
+* Sensor ...\
+* Motor..\
+* ...\
+* Android\
+\
+=== Team Members & Responsibilities ===\
+<Team Picture>\
+\
+Gitlab Project Link - [https://gitlab.com/...]\
+<BR/>\
+\
+<Provide ECU names and members responsible>\
+<One member may participate in more than one ECU>\
+\
+* Sensor\
+** Link to Gitlab user1\
+** Link to Gitlab user2\
+\
+* Motor\
+** Link to Gitlab user1\
+** Link to Gitlab user2\
+\
+* Geographical\
+** Link to Gitlab user1\
+** Link to Gitlab user2\
+\
+* Communication Bridge Controller & LCD\
+** Link to Gitlab user1\
+** Link to Gitlab user2\
+\
+* Android Application\
+** Link to Gitlab user1\
+** Link to Gitlab user2\
+\
+* Testing Team\
+** Link to Gitlab user1\
+** Link to Gitlab user2\
+\
+<HR>\
+<BR/>\
+== Schedule ==\
+\
+\
+\{| class="wikitable"\
+|-\
+! scope="col"| Week#\
+! scope="col"| Start Date\
+! scope="col"| End Date\
+! scope="col"| Task\
+! scope="col"| Status\
+|-\
+! scope="row"| 1\
+| 09/15/2017\
+| 09/16/2017\
+|\
+* Read previous projects, gather information and discuss among the group members.\
+* Distribute modules to each team member.\
+\
+| Completed\
+|-\
+! scope="row"| 2\
+| 09/17/2017\
+| 10/03/2017\
+|\
+|\
+|-\
+|\}\
+\
+<HR>\
+<BR/>\
+== Parts List & Cost ==\
+\{| class="wikitable"\
+|-\
+! scope="col"| Item#\
+! scope="col"| Part Desciption\
+! scope="col"| Vendor\
+! scope="col"| Qty\
+! scope="col"| Cost\
+|-\
+! scope="row"| 1\
+| RC Car \
+| Traxxas\
+| 1\
+| $250.00\
+|-\
+! scope="row"| 2\
+| CAN Transceivers MCP2551-I/P\
+| Microchip [http://www.microchip.com/wwwproducts/en/en010405]\
+| 8\
+| Free Samples\
+|-\
+|\}\
+\
+<HR>\
+<BR/>\
+== Printed Circuit Board  ==\
+<Picture and information, including links to your PCB>\
+<br>\
+\
+<HR>\
+<BR/>\
+== CAN Communication ==\
+<Talk about your message IDs or communication strategy, such as periodic transmission, MIA management etc.>\
+\
+=== Hardware Design ===\
+<Show your CAN bus hardware design>\
+\
+=== DBC File ===\
+<Gitlab link to your DBC file>\
+<You can optionally use an inline image>\
+\
+\
+<HR>\
+<BR/>\
+== Sensor ECU ==\
+<Picture and link to Gitlab>\
+\
+=== Hardware Design ===\
+\
+=== Software Design ===\
+<List the code modules that are being called periodically.>\
+\
+=== Technical Challenges ===\
+\
+< List of problems and their detailed resolutions>\
+\
+<HR>\
+<BR/>\
+== Motor ECU ==\
+<Picture and link to Gitlab>\
+\
+=== Hardware Design ===\
+\
+=== Software Design ===\
+<List the code modules that are being called periodically.>\
+\
+=== Technical Challenges ===\
+\
+< List of problems and their detailed resolutions>\
+\
+<HR>\
+<BR/>\
+== Geographical Controller ==\
+\
+<Picture and link to Gitlab>\
+\
+=== Hardware Design ===\
+\
+=== Software Design ===\
+<List the code modules that are being called periodically.>\
+\
+=== Technical Challenges ===\
+\
+< List of problems and their detailed resolutions>\
+\
+<HR>\
+<BR/>\
+\
+<HR>\
+<BR/>\
+== Communication Bridge Controller & LCD ==\
+<Picture and link to Gitlab>\
+\
+=== Hardware Design ===\
+\
+=== Software Design ===\
+<List the code modules that are being called periodically.>\
+\
+=== Technical Challenges ===\
+\
+< List of problems and their detailed resolutions>\
+\
+<HR>\
+<BR/>\
+== Master Module ==\
+\
+<Picture and link to Gitlab>\
+\
+=== Hardware Design ===\
+\
+=== Software Design ===\
+<List the code modules that are being called periodically.>\
+\
+=== Technical Challenges ===\
+\
+< List of problems and their detailed resolutions>\
+\
+<HR>\
+<BR/>\
+== Mobile Application ==\
+<Picture and link to Gitlab>\
+\
+=== Hardware Design ===\
+\
+=== Software Design ===\
+<List the code modules that are being called periodically.>\
+\
+=== Technical Challenges ===\
+\
+< List of problems and their detailed resolutions>\
+\
+\
+<BR/>\
+<HR>\
+<HR>\
+<BR/>\
+== Conclusion ==\
+<Organized summary of the project>\
+\
+<What did you learn?>\
+\
+=== Project Video ===\
+\
+=== Project Source Code ===\
+\
+=== Advise for Future Students ===\
+<Bullet points and discussion>\
+\
+=== Acknowledgement ===\
+\
+=== References ===\
+}
