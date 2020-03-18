@@ -1,54 +1,72 @@
-== Project Title ==\
-<Team Name>\
-\
-<HR>\
-<BR/>\
-== Abstract ==\
+== '''CAN-STER TRUCK''' ==
+
+== '''Abstract''' ==
 The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS and CAN modules) was divided among by six team members. The aim of the project is to develop an autonomous RC Car which can navigate from the source location to a selected destination by avoiding obstacles in its path using sensors and motors.
-=== Introduction ===\
-\
-The project was divided into N modules:\
-\
-* Sensor ...\
-* Motor..\
-* ...\
-* Android\
-\
-=== Team Members & Responsibilities ===\
-<Team Picture>\
-\
-Gitlab Project Link - [https://gitlab.com/...]\
-<BR/>\
-\
-<Provide ECU names and members responsible>\
-<One member may participate in more than one ECU>\
-\
-* Sensor\
-** Link to Gitlab user1\
-** Link to Gitlab user2\
-\
-* Motor\
-** Link to Gitlab user1\
-** Link to Gitlab user2\
-\
-* Geographical\
-** Link to Gitlab user1\
-** Link to Gitlab user2\
-\
-* Communication Bridge Controller & LCD\
-** Link to Gitlab user1\
-** Link to Gitlab user2\
-\
-* Android Application\
-** Link to Gitlab user1\
-** Link to Gitlab user2\
-\
-* Testing Team\
-** Link to Gitlab user1\
-** Link to Gitlab user2\
-\
-<HR>\
-<BR/>\
+
+<BR/>
+
+== '''Introduction''' ==
+
+The project was divided into N modules:
+
+* Sensor Controller
+* Motor Controller
+* Geographical
+* Communication Bridge Controller & LCD
+* Android Application and Bluetooth
+* PCB Hardware Integration 
+* Testing and Code Review
+
+<BR/>
+
+== '''Team Members & Responsibilities''' ==
+<Team Picture>
+
+Gitlab Project Link - [https://gitlab.com/coder137/can-ster_truck  Can-ster Truck]
+<BR/>
+
+* Sensors and Bluetooth Module
+** [https://gitlab.com/deharo27  Jesus De Haro De Reza]
+** [https://gitlab.com/nikhilpeoria  Nikhil Pabbisetty]
+
+* Motor Module
+** [https://gitlab.com/ganeshram2493   Ganesh Ram Pamadi]
+** [https://gitlab.com/nikhilpeoria  Nikhil Pabbisetty]
+** [https://gitlab.com/deharo27  Jesus De Haro De Reza]
+
+* Geographical Module
+** GPS: 
+*** [https://gitlab.com/coder137  Niket Naidu] 
+** COMPASS: 
+*** [https://gitlab.com/coder137  Niket Naidu] 
+*** [https://gitlab.com/akhilcherukuri  Akhil Cherukuri ]
+
+* Communication Bridge Controller & LCD
+** [https://gitlab.com/ashishladage1  Ashish Anant Ladage]
+
+* Android Application
+** [https://gitlab.com/akhilcherukuri  Akhil Cherukuri ]
+** [https://gitlab.com/coder137  Niket Naidu] 
+
+* Testing Team / Code Reviewers 
+** [https://gitlab.com/ganeshram2493   Ganesh Ram Pamadi]
+** [https://gitlab.com/coder137  Niket Naidu] 
+
+* Hardware Integration (PCB & 3D Print)
+** [https://gitlab.com/ganeshram2493   Ganesh Ram Pamadi]
+** [https://gitlab.com/ashishladage1  Ashish Anant Ladage]
+** [https://gitlab.com/akhilcherukuri  Akhil Cherukuri]
+
+<BR/>
+
+== '''Administrative Responsibilities''' ==
+* Team Lead - [https://gitlab.com/coder137  Niket Naidu] 
+* Git Repository Manager - [https://gitlab.com/coder137  Niket Naidu] 
+* Bill Of Materials Manager - [https://gitlab.com/akhilcherukuri Akhil Cherukuri]
+* Wiki Report Manager - [https://gitlab.com/akhilcherukuri Akhil Cherukuri]
+
+<BR/>
+
 == '''Schedule''' ==
 
 
@@ -340,130 +358,129 @@ Gitlab Project Link - [https://gitlab.com/...]\
 
 <BR/>
 
-== Printed Circuit Board  ==\
-<Picture and information, including links to your PCB>\
-<br>\
-\
-<HR>\
-<BR/>\
-== CAN Communication ==\
-<Talk about your message IDs or communication strategy, such as periodic transmission, MIA management etc.>\
-\
-=== Hardware Design ===\
-<Show your CAN bus hardware design>\
-\
-=== DBC File ===\
-<Gitlab link to your DBC file>\
-<You can optionally use an inline image>\
-\
-\
-<HR>\
-<BR/>\
-== Sensor ECU ==\
-<Picture and link to Gitlab>\
-\
-=== Hardware Design ===\
-\
-=== Software Design ===\
-<List the code modules that are being called periodically.>\
-\
-=== Technical Challenges ===\
-\
-< List of problems and their detailed resolutions>\
-\
-<HR>\
-<BR/>\
-== Motor ECU ==\
-<Picture and link to Gitlab>\
-\
-=== Hardware Design ===\
-\
-=== Software Design ===\
-<List the code modules that are being called periodically.>\
-\
-=== Technical Challenges ===\
-\
-< List of problems and their detailed resolutions>\
-\
-<HR>\
-<BR/>\
-== Geographical Controller ==\
-\
-<Picture and link to Gitlab>\
-\
-=== Hardware Design ===\
-\
-=== Software Design ===\
-<List the code modules that are being called periodically.>\
-\
-=== Technical Challenges ===\
-\
-< List of problems and their detailed resolutions>\
-\
-<HR>\
-<BR/>\
-\
-<HR>\
-<BR/>\
-== Communication Bridge Controller & LCD ==\
-<Picture and link to Gitlab>\
-\
-=== Hardware Design ===\
-\
-=== Software Design ===\
-<List the code modules that are being called periodically.>\
-\
-=== Technical Challenges ===\
-\
-< List of problems and their detailed resolutions>\
-\
-<HR>\
-<BR/>\
-== Master Module ==\
-\
-<Picture and link to Gitlab>\
-\
-=== Hardware Design ===\
-\
-=== Software Design ===\
-<List the code modules that are being called periodically.>\
-\
-=== Technical Challenges ===\
-\
-< List of problems and their detailed resolutions>\
-\
-<HR>\
-<BR/>\
-== Mobile Application ==\
-<Picture and link to Gitlab>\
-\
-=== Hardware Design ===\
-\
-=== Software Design ===\
-<List the code modules that are being called periodically.>\
-\
-=== Technical Challenges ===\
-\
-< List of problems and their detailed resolutions>\
-\
-\
-<BR/>\
-<HR>\
-<HR>\
-<BR/>\
-== Conclusion ==\
-<Organized summary of the project>\
-\
-<What did you learn?>\
-\
-=== Project Video ===\
-\
-=== Project Source Code ===\
-\
-=== Advise for Future Students ===\
-<Bullet points and discussion>\
-\
-=== Acknowledgement ===\
-\
-=== References ===\
-}
+== Printed Circuit Board  ==
+<Picture and information, including links to your PCB>
+<br>
+
+<HR>
+<BR/>
+== CAN Communication ==
+<Talk about your message IDs or communication strategy, such as periodic transmission, MIA management etc.>
+
+=== Hardware Design ===
+<Show your CAN bus hardware design>
+
+=== DBC File ===
+<Gitlab link to your DBC file>
+<You can optionally use an inline image>
+
+
+<HR>
+<BR/>
+== Sensor ECU ==
+<Picture and link to Gitlab>
+
+=== Hardware Design ===
+
+=== Software Design ===
+<List the code modules that are being called periodically.>
+
+=== Technical Challenges ===
+
+< List of problems and their detailed resolutions>
+
+<HR>
+<BR/>
+== Motor ECU ==
+<Picture and link to Gitlab>
+
+=== Hardware Design ===
+
+=== Software Design ===
+<List the code modules that are being called periodically.>
+
+=== Technical Challenges ===
+
+< List of problems and their detailed resolutions>
+
+<HR>
+<BR/>
+== Geographical Controller ==
+
+<Picture and link to Gitlab>
+
+=== Hardware Design ===
+
+=== Software Design ===
+<List the code modules that are being called periodically.>
+
+=== Technical Challenges ===
+
+< List of problems and their detailed resolutions>
+
+<HR>
+<BR/>
+
+<HR>
+<BR/>
+== Communication Bridge Controller & LCD ==
+<Picture and link to Gitlab>
+
+=== Hardware Design ===
+
+=== Software Design ===
+<List the code modules that are being called periodically.>
+
+=== Technical Challenges ===
+
+< List of problems and their detailed resolutions>
+
+<HR>
+<BR/>
+== Master Module ==
+
+<Picture and link to Gitlab>
+
+=== Hardware Design ===
+
+=== Software Design ===
+<List the code modules that are being called periodically.>
+
+=== Technical Challenges ===
+
+< List of problems and their detailed resolutions>
+
+<HR>
+<BR/>
+== Mobile Application ==
+<Picture and link to Gitlab>
+
+=== Hardware Design ===
+
+=== Software Design ===
+<List the code modules that are being called periodically.>
+
+=== Technical Challenges ===
+
+< List of problems and their detailed resolutions>
+
+
+<BR/>
+<HR>
+<HR>
+<BR/>
+== Conclusion ==
+<Organized summary of the project>
+
+<What did you learn?>
+
+=== Project Video ===
+
+=== Project Source Code ===
+
+=== Advise for Future Students ===
+<Bullet points and discussion>
+
+=== Acknowledgement ===
+
+=== References ===
