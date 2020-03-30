@@ -76,183 +76,238 @@ The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced contr
 ! scope="col"| Status
 |-
 
-! scope="row"| 1
-| style="text-align:center;" |02/11/2020
-| style="text-align:center;" |02/17/2020
+! scope="row"| '''1'''
+| style="text-align:center;" |'''02/11/2020'''
+| style="text-align:center;" |'''02/17/2020'''
 |
-*Form teams and decide group name
-*Review past projects
-*Create Slack group and invite Preet
-*Create groups Gitlab repository
-*Analysis of component required
+*'''Form teams and decide group name'''
+*'''Review past projects'''
+*'''Slack: Create project group and invite Preet'''
+*'''Gitlab: Create project groups repository'''
+*'''Analysis of component required'''
 
 | 
-*<font color="green">Completed<font>
-*Completed
-*Completed
-*Completed
-*Completed
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
-! scope="row"| 2
-| style="text-align:center;" |02/18/2020
-| style="text-align:center;" |02/24/2020
+! scope="row"| '''2'''
+| style="text-align:center;" |'''02/18/2020'''
+| style="text-align:center;" |'''02/24/2020'''
 |
-*Study CAN Communication
-*Create Bill of Materials
-*Order RC Car 
+*'''Study CAN Communication'''
+*'''Create Bill of Materials'''
+*'''Order RC Car''' 
 |
-*<font color="green">Completed<font>
-*Completed
-*Completed
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
-! scope="row"| 3
-| style="text-align:center;" |02/25/2020
-| style="text-align:center;" |03/02/2020
+! scope="row"| '''3'''
+| style="text-align:center;" |'''02/25/2020'''
+| style="text-align:center;" |'''03/02/2020'''
 |
-*Setup team finance management using Splitwise
-*Complete Bill of Materials
-*Order all other required components
+*'''Setup team finance management using Splitwise'''
+*'''Complete Bill of Materials'''
+*'''Order all other required components'''
+*'''Wikipedia: Setup project report template'''
 |
-*<font color="green">Completed<font>
-*Completed
-*Completed
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
-! scope="row"| 4
-| style="text-align:center;" |03/03/2020
-| style="text-align:center;" |03/09/2020
+! scope="row"| '''4'''
+| style="text-align:center;" |'''03/03/2020'''
+| style="text-align:center;" |'''03/09/2020'''
 |
-*Read the respective datasheets and manuals for each component
-*Test each component for working conditions
+*'''Read the respective datasheets and manuals for each component'''
+*'''Test each component for working conditions'''
 |
-*<font color="green">Completed<font>
-*Completed
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
-! scope="row"| 5
-| style="text-align:center;" |03/10/2020
-| style="text-align:center;" |03/16/2020
+! scope="row"| '''5'''
+| style="text-align:center;" |'''03/10/2020'''
+| style="text-align:center;" |'''03/16/2020'''
 |
-*Assign team responsibilities and roles
-*Setup team project management environmnet 
-*Define CAN DBC
-*<font color="green">Android: Environmental setup of Android Studio and Enable Version Control</font>
-*<font color="brown">Hardware : Decide PCB Editing Software (Kicad vs Eagle)</font>
-*<font color="brown">Hardware : Draft schematic for required PCB design</font>
+*'''Assign team responsibilities and roles'''
+*'''Setup team project management environmnet''' 
+*'''Define CAN DBC'''
+*'''Research GPS antennas and order'''
+*<font color="32CD32">'''Android: Environmental setup of Android Studio and enable version control'''</font>
+*<font color="A52A2A">'''Hardware : Decide PCB editing software (Kicad vs Eagle)'''</font>
+*<font color="A52A2A">'''Hardware : Draft schematic for required PCB design'''</font> 
 |
-*<font color="green">Completed<font>
-*Completed
-*Completed
-*Completed
-*<font color="red">Pending</font>
-*<font color="red">Pending</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
-! scope="row"| 6
-| style="text-align:center;" |03/17/2020
-| style="text-align:center;" |03/23/2020
+! scope="row"| '''6'''
+| style="text-align:center;" |'''03/17/2020'''
+| style="text-align:center;" |'''03/23/2020'''
 |
-*<font color="brown">Hardware : Create CAD model of PCB </font>
-*<font color="brown">Hardware : Create 3D models for RC mounts </font>
-*Establish final wiki schedule
-*<font color="green">Android: Add a TextView for displaying the Bluetooth connection status in the application.</font>
-*Complete high-level system block diagram
+*<font color="A52A2A">'''Hardware : Create CAD model of PCB''' </font>
+*<font color="A52A2A">'''Hardware : Create 3D models for RC mounts''' </font>
+*<font color="32CD32">'''Android: Add a Button for changing bluetooth connection status in the application''' </font>
+*<font color= "052EFA">'''Geological: Interface Compass module with SJ-2 board using I2C interface''' </font>
+*<font color= "052EFA">'''Geological: Interface GPS module with SJ-2 board using the UART interface''' </font>
+*<font color= "052EFA">'''Geological: Parse raw data to get meaningful values for GPS and Compass''' </font>
+*<font color= "DF7C24">'''Sensor: Interface and check the functionality of ultrasonic sensors to the SJ-2 board''' </font>
+*<font color= "00CED1">'''Motor: Interface of Servo & DC motor to the SJ-2 board and check for basic functionality''' </font>
 |
-*<font color="red">Pending<font>
-*Pending
-*Pending
-*Pending
-*Pending
-*Pending
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
-! scope="row"| 7
-| style="text-align:center;" |03/24/2020
-| style="text-align:center;" |03/30/2020
+! scope="row"| '''7'''
+| style="text-align:center;" |'''03/24/2020'''
+| style="text-align:center;" |'''03/30/2020'''
 |
-*<font color="brown">Hardware : Analyze PCB Model </font>
-*Explore UI designing of LCD
-*<font color="green">Android: Initiate Bluetooth Communication and Send "Hello World".</font>
-
+*<font color="A52A2A">'''Hardware : Finalize components placement on PCB.''' </font>
+*<font color= "00CED1">'''Motor: Add PWM functionality and test the code on DC and servo motors''' </font>
+*<font color= "DF7C24">'''Sensor: Interface and check and study the output readings of Lidar sensor with SJ-2 board over UART''' </font>
+*<font color= "8911B9">'''LCD Display: Explore UI designing of LCD''' </font>
+*<font color="A52A2A">'''Hardware: Finalize on optimal ultrasonic sensor placements''' </font>
+*<font color= "32CD32 ">'''Android: Initiate Bluetooth communication and show staus via text view''' </font>
+*'''Wikipedia: Establish final wiki schedule'''
+*'''Complete CAN communication format for each controller and link DBC file to the Wiki'''
+*'''Complete high-level system block diagram'''
+*'''Complete unit-level block diagrams'''
 |
-*<font color="red">Pending<font>
-*Pending
-*Pending
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
 |-
 
-! scope="row"| 8
-| style="text-align:center;" |03/31/2020
-| style="text-align:center;" |04/06/2020
+! scope="row"| '''8'''
+| style="text-align:center;" |'''03/31/2020'''
+| style="text-align:center;" |'''04/06/2020'''
 |
-*<font color="brown">Hardware : Order PCB Circuit board </font>
-*<font color="brown">Hardware : 3D print out mount modules </font>
-*<font color="green">Android: Embed Google Maps API for setting the car's destination.</font>
-
+*<font color="A52A2A">'''Hardware: Analyze PCB model and order PCB Circuit board''' </font>
+*<font color="A52A2A">'''Hardware: Analyze 3D CAD drawing for ultrasonic mounts and print out the modules''' </font>
+*<font color= "32CD32 ">'''Android: Initiate Bluetooth communication and send "Hello World".''' </font>
+*'''Wikipedia: Start adding information/images/diagrams to the relevant sections''' 
+*<font color= "00CED1">'''Motor: Configure ESC for correct speed outcome according to frequency & PWM values.''' </font>
+*<font color= "00CED1">'''Motor: Finish wheel encoder implementation and integration.''' </font>
+*<font color= "052EFA">'''Geological: Implement waypoints algorithm''' </font>
+*<font color= "8911B9">'''Driver: Implement obstacle avoidance algorithm''' </font>
 |
-*<font color="red">Pending<font>
-*Pending
-*Pending
+*
+*
+*
+*
+*
+*
+*
+*
 |-
 
-! scope="row"| 9
-| style="text-align:center;" |04/07/2020
-| style="text-align:center;" |04/13/2020
+! scope="row"| '''9'''
+| style="text-align:center;" |'''04/07/2020'''
+| style="text-align:center;" |'''04/13/2020'''
 |
-*<font color="brown">Hardware: Remove Unused parts from RC Car </font>
-*<font color="brown">Hardware: Mount PCB and 3D Parts </font>
-*<font color="green">Android: Send car location to the app and checkpoints received to Geo module</font>
-
+*<font color="A52A2A">'''Hardware: Remove Unused parts from RC Car''' </font>
+*<font color="A52A2A">'''Hardware: Mount PCB and 3D Parts''' </font>
+*<font color= "00CED1">'''Motor: Decide different cut-off values from sensor to command right /slight right/ straight/ slight left/ left to motor.''' </font>
+*<font color= "32CD32 ">'''Android: Embed Google Maps API for setting the car's destination.''' </font>
+*<font color= "8911B9">'''LCD: Work to show RC cars live status information(battery level, current speed, long, lat, bearing, sensor data, etc)''' </font>
+*<font color= "8911B9">'''Driver: Test obstacle avoidance algorithm and fine-tune sensor readings''' </font>
+*<font color= "052EFA">'''Geological: Test checkpoint algorithm''' </font>
+*'''Update Bill of Materials for miscellaneous hardware'''
 |
-*<font color="red">Pending<font>
-*Pending
-*Pending
+*
+*
+*
+*
+*
+*
+*
+*
 |-
 
-! scope="row"| 10
-| style="text-align:center;" |04/14/2020
-| style="text-align:center;" |04/20/2020
+! scope="row"| '''10'''
+| style="text-align:center;" |'''04/14/2020'''
+| style="text-align:center;" |'''04/20/2020'''
 |
-*<font color="brown">Hardware: Integrate all Hardware Modules </font>
-
+*<font color="A52A2A">'''Hardware: Integrate all hardware modules''' </font>
+*<font color= "8911B9">'''LCD: Testing & Validation of the LCD UI and display vehicle status information''' </font>
+*<font color= "32CD32 ">'''Android: Send car location to the app and checkpoints received to Geo module''' </font>
+*<font color= "00CED1">'''Motor: Optimize PID control by accelerating/decelerating as instructed by Driver''' </font>
+*'''Add multiple debug messages and transmit on CAN'''
 |
-*<font color="red">Pending<font>
+*
+*
+*
+*
+*
 |-
 
-! scope="row"| 11
-| style="text-align:center;" |04/21/2020
-| style="text-align:center;" |04/27/2020
+! scope="row"| '''11'''
+| style="text-align:center;" |'''04/21/2020'''
+| style="text-align:center;" |'''04/27/2020'''
 |
-*Software: Continuously test the whole system
-*Finalize RC Car For Project Proto 1
+*<font color= "32CD32 ">'''Android: Send additional vehicle status information from RC car to the Application for display''' </font>
+*<font color= "32CD32 ">'''Android: Finalize User Interface Design and Icon''' </font>
+*'''Continuously test the whole system and handling of corner cases (outside).'''
+*'''Finalize RC Car For Project Proto 1'''
 |
-*<font color="red">Pending<font>
-*Pending
+*
+*
+*
+*
 |-
 
-! scope="row"| 12
-| style="text-align:center;" |04/28/2020
-| style="text-align:center;" |05/04/2020
+! scope="row"| '''12'''
+| style="text-align:center;" |'''04/28/2020'''
+| style="text-align:center;" |'''05/04/2020'''
 |
+*'''Gitlab: Push final code''' 
 *April 28th: Project Proto 1
-*Finalize RC Car for Project Demo
+*'''Finalize RC Car for Project Demo'''
 *May 1st: Project Presentation
-*Finalize RC Car for Project Proto 2
+*'''Finalize RC Car for Project Proto 2'''
 |
-*<font color="red">Pending<font>
-*Pending
+*
+*
+*
+*
+*
 |-
 
-! scope="row"| 13
-| style="text-align:center;" |05/14/2020
-| style="text-align:center;" |05/21/2020
+! scope="row"| '''13'''
+| style="text-align:center;" |'''05/05/2020'''
+| style="text-align:center;" |'''05/21/2020'''
 |
-* Complete Individual Contribution Peer Grading
-* Review and Complete Wiki Project Page
+* '''Complete Individual Contribution Peer Grading'''
+* '''Review and Complete Wiki Project Page'''
 |
-*<font color="red">Pending<font>
-*Pending
+*
+*
 |-
 |}
 
