@@ -1,4 +1,4 @@
-[[File:group_logo.jpg|thumb|795px|caption|right|CAN-STER TRUCK LOGO]]
+[[File:CMPE243_S20_T2_Canster_Truck_Logo.png|thumb|425px|caption|right|CAN-STER TRUCK LOGO]]
 
 == '''Abstract''' ==
 '''The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS, and CAN modules) was divided among six team members. The aim of the project is to develop an autonomous RC Car which can navigate from the source location to a selected destination by avoiding obstacles in its path using sensors and motors.'''
