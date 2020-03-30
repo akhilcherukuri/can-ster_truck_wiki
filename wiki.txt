@@ -9,17 +9,19 @@ The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced contr
 
 == '''Introduction''' ==
 
-The project was divided into N modules:
+'''The project was divided into 7 modules:'''
 
-* Sensor Controller
-* Motor Controller
-* Geographical
-* Communication Bridge Controller & LCD
-* Android Application and Bluetooth
-* PCB Hardware Integration 
-* Testing and Code Review
+* <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
+* <font color= "00CED1">'''Motor Controller'''</font color>
+* <font color= "052EFA">'''Geological Controller'''</font color>
+* <font color= "8911B9">'''Driver and LCD Controller'''</font color>
+* <font color="A52A2A">'''Hardware Integration'''</font color> 
+* <font color= "32CD32 ">'''Android Application'''</font color>
+* <font color= "F1C40F"> '''Testing & Code Review'''</font color>
+
 
 <BR/>
+
 
 == '''Team Members & Responsibilities''' ==
 <Team Picture>
