@@ -24,42 +24,35 @@ The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced contr
 
 
 == '''Team Members & Responsibilities''' ==
-<Team Picture>
 
-Gitlab Project Link - [https://gitlab.com/coder137/can-ster_truck  Can-ster Truck]
+'''Gitlab Project Link''' - [https://gitlab.com/coder137/can-ster_truck  '''CAN-STER Truck''']
 <BR/>
 
-* Sensors and Bluetooth Module
-** [https://gitlab.com/deharo27  Jesus De Haro De Reza]
-** [https://gitlab.com/nikhilpeoria  Nikhil Pabbisetty]
+*'''Niket Naidu''' [https://www.linkedin.com/in/niket-naidu-30090a134/  LinkedIn] [https://gitlab.com/coder137  Gitlab] 
+** <font color= "052EFA">'''Geological Controller'''</font color>
+** <font color= "F1C40F"> '''Testing & Code Review'''</font color>
+** <font color= "32CD32 ">'''Android Application'''</font color>
 
-* Motor Module
-** [https://gitlab.com/ganeshram2493   Ganesh Ram Pamadi]
-** [https://gitlab.com/nikhilpeoria  Nikhil Pabbisetty]
-** [https://gitlab.com/deharo27  Jesus De Haro De Reza]
+*'''Ganesh Ram Pamadi''' [https://www.linkedin.com/in/ganeshram93/  LinkedIn] [https://gitlab.com/ganeshram2493  Gitlab]
+** <font color= "00CED1">'''Motor Controller'''</font color>
+** <font color="A52A2A">'''Hardware Integration'''</font color>
+** <font color= "F1C40F"> '''Testing & Code Review'''</font color>
 
-* Geographical Module
-** GPS: 
-*** [https://gitlab.com/coder137  Niket Naidu] 
-** COMPASS: 
-*** [https://gitlab.com/coder137  Niket Naidu] 
-*** [https://gitlab.com/akhilcherukuri  Akhil Cherukuri ]
+*'''Nikhil Pabbisetty'''  [https://www.linkedin.com/in/nikhilpabbisetty/  LinkedIn] [https://gitlab.com/nikhilpeoria  Gitlab]
+** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
+** <font color= "00CED1">'''Motor Controller'''</font color>
 
-* Communication Bridge Controller & LCD
-** [https://gitlab.com/ashishladage1  Ashish Anant Ladage]
+*'''Akhil Cherukuri''' [https://www.linkedin.com/in/akhilcherukuri/  LinkedIn] [https://gitlab.com/akhilcherukuri  Gitlab]
+** <font color= "32CD32 ">'''Android Application'''</font color>
+** <font color= "052EFA">'''Geological Controller'''</font color>
 
-* Android Application
-** [https://gitlab.com/akhilcherukuri  Akhil Cherukuri ]
-** [https://gitlab.com/coder137  Niket Naidu] 
+*'''Ashish Anant Ladage''' [https://www.linkedin.com/in/ashish-anant-ladage-7bb3a214b/  LinkedIn] [https://gitlab.com/ashishladage1  Gitlab] 
+** <font color= "8911B9">'''Driver and LCD Controller'''</font color>
+** <font color="A52A2A">'''Hardware Integration'''</font color>
 
-* Testing Team / Code Reviewers 
-** [https://gitlab.com/ganeshram2493   Ganesh Ram Pamadi]
-** [https://gitlab.com/coder137  Niket Naidu] 
-
-* Hardware Integration (PCB & 3D Print)
-** [https://gitlab.com/ganeshram2493   Ganesh Ram Pamadi]
-** [https://gitlab.com/ashishladage1  Ashish Anant Ladage]
-** [https://gitlab.com/akhilcherukuri  Akhil Cherukuri]
+*'''Jesus De Haro De Reza''' [https://www.linkedin.com/in/jesus-de-haro-66342424/  LinkedIn] [https://gitlab.com/deharo27  Gitlab]
+** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
+** <font color= "00CED1">'''Motor Controller'''</font color>
 
 <BR/>
 
