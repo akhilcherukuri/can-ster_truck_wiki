@@ -57,10 +57,10 @@ The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced contr
 <BR/>
 
 == '''Administrative Responsibilities''' ==
-* Team Lead - [https://gitlab.com/coder137  Niket Naidu] 
-* Git Repository Manager - [https://gitlab.com/coder137  Niket Naidu] 
-* Bill Of Materials Manager - [https://gitlab.com/akhilcherukuri Akhil Cherukuri]
-* Wiki Report Manager - [https://gitlab.com/akhilcherukuri Akhil Cherukuri]
+* '''Team Lead''' - [https://www.linkedin.com/in/niket-naidu-30090a134/  '''Niket Naidu'''] 
+* '''Git Repository Manager''' - [https://www.linkedin.com/in/niket-naidu-30090a134/  '''Niket Naidu'''] 
+* '''Bill Of Materials Manager''' - [https://www.linkedin.com/in/akhilcherukuri '''Akhil Cherukuri''']
+* '''Wiki Report Manager''' - [https://www.linkedin.com/in/akhilcherukuri '''Akhil Cherukuri''']
 
 <BR/>
 
