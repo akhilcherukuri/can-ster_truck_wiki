@@ -80,7 +80,7 @@
 *'''Form teams and decide group name'''
 *'''Review past projects'''
 *'''Slack: Create project group and invite Preet'''
-*'''Gitlab: Create project groups repository'''
+*'''GitLab: Create project groups repository'''
 *'''Analysis of component required'''
 
 | 
@@ -108,7 +108,7 @@
 | style="text-align:center;" |'''02/25/2020'''
 | style="text-align:center;" |'''03/02/2020'''
 |
-*'''Setup team finance management using Splitwise'''
+*'''Setup team finance management using Splitwise application'''
 *'''Complete Bill of Materials'''
 *'''Order all other required components'''
 *'''Wikipedia: Setup project report template'''
@@ -135,11 +135,11 @@
 | style="text-align:center;" |'''03/16/2020'''
 |
 *'''Assign team responsibilities and roles'''
-*'''Setup team project management environmnet''' 
+*'''Setup team project management environment (ClickUp)''' 
 *'''Define CAN DBC'''
 *'''Research GPS antennas and order'''
 *<font color="32CD32">'''Android: Environmental setup of Android Studio and enable version control'''</font>
-*<font color="A52A2A">'''Hardware : Decide PCB editing software (Kicad vs Eagle)'''</font>
+*<font color="A52A2A">'''Hardware : Decide PCB editing software (easyEDA)'''</font>
 *<font color="A52A2A">'''Hardware : Draft schematic for required PCB design'''</font> 
 |
 *<font color="green">'''Completed'''</font>
@@ -155,8 +155,7 @@
 | style="text-align:center;" |'''03/17/2020'''
 | style="text-align:center;" |'''03/23/2020'''
 |
-*<font color="A52A2A">'''Hardware : Create CAD model of PCB''' </font>
-*<font color="A52A2A">'''Hardware : Create 3D models for RC mounts''' </font>
+*<font color="A52A2A">'''Hardware : Create model of PCB''' </font>
 *<font color="32CD32">'''Android: Add a Button for changing bluetooth connection status in the application''' </font>
 *<font color= "052EFA">'''Geological: Interface Compass module with SJ-2 board using I2C interface''' </font>
 *<font color= "052EFA">'''Geological: Interface GPS module with SJ-2 board using the UART interface''' </font>
@@ -164,7 +163,6 @@
 *<font color= "DF7C24">'''Sensor: Interface and check the functionality of ultrasonic sensors to the SJ-2 board''' </font>
 *<font color= "00CED1">'''Motor: Interface of Servo & DC motor to the SJ-2 board and check for basic functionality''' </font>
 |
-*<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
@@ -190,17 +188,17 @@
 *'''Complete unit-level block diagrams'''
 *<font color= "DF7C24">'''Bridge: Interface HC-5 bluetooth module with Sj-2 board using serial communicaton'''</font>
 |
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
 ! scope="row"| '''8'''
@@ -208,24 +206,24 @@
 | style="text-align:center;" |'''04/06/2020'''
 |
 *<font color="A52A2A">'''Hardware: Analyze PCB model and order PCB Circuit board''' </font>
-*<font color="A52A2A">'''Hardware: Analyze 3D CAD drawing for ultrasonic mounts and print out the modules''' </font>
 *<font color= "32CD32 ">'''Android: Initiate Bluetooth communication and send "Hello World".''' </font>
 *'''Wikipedia: Start adding information/images/diagrams to the relevant sections''' 
-*<font color= "00CED1">'''Motor: Configure ESC for correct speed outcome according to frequency & PWM values.''' </font>
-*<font color= "00CED1">'''Motor: Finish wheel encoder implementation and integration.''' </font>
+*<font color= "00CED1">'''Motor: Configure ESC for correct speed outcome according to frequency & PWM values''' </font>
+*<font color= "00CED1">'''Motor: Finish RPM sensor hardware and software implementation and integration''' </font>
+*<font color= "DF7C24">'''Sensor: Read output from Lidar and setup structure for outputting for DBC''' </font>
 *<font color= "052EFA">'''Geological: Implement waypoints algorithm''' </font>
 *<font color= "8911B9">'''Driver: Implement obstacle avoidance algorithm''' </font>
 *<font color= "DF7C24">'''Bridge: Pass data such as "Hello World" from HC-05 bluetooth module to bluetooth terminal android application'''</font>
 |
-*
-*
-*
-*
-*
-*
-*
-*
-*
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="blue">'''In Progress'''</font>
 |-
 
 ! scope="row"| '''9'''
@@ -244,13 +242,13 @@
 |
 *
 *
+*<font color="green">'''Completed'''</font>
+*
+*<font color="blue">'''In Progress'''</font>
 *
 *
 *
-*
-*
-*
-*
+*<font color="blue">'''In Progress'''</font>
 |-
 
 ! scope="row"| '''10'''
@@ -322,7 +320,7 @@
 {| class="wikitable" style="width: 100%;"
 |-
 ! scope="col"| Item#
-! scope="col"| Part Desciption
+! scope="col"| Part Description
 ! scope="col"| Part Model & Vendor
 ! scope="col"| Quantity
 ! scope="col"| Cost in USD
@@ -401,21 +399,21 @@
 |-
 ! scope="row"| 13
 | '''GPS Antenna'''  
-| 
+| Generic
 | 1
 | $
 |-
 ! scope="row"| 14
 | '''PCB Fabrication''' 
-| 
-| 1
-| $
+| [https://jlcpcb.com/ JLCPCB]
+| 5
+| $40.15
 |-
 ! scope="row"| 15
 | '''Miscellaneous''' 
 | [https://www.amazon.com Amazon],[https://www.mouser.com/ Mouser Electronics],[https://www.digikey.com/ Digikey],[https://anchor-electronics.com/ Anchor Electronics]
 | ~
-| $31.08
+| $48.07
 |-
 |}
 
