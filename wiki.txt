@@ -5,7 +5,7 @@
 
 <BR/>
 
-== '''Introduction''' ==
+== '''Introduction and Objectives''' ==
 
 '''The project was divided into 7 modules:'''
 
@@ -20,7 +20,7 @@
 
 <BR/>
 
-== '''Team Members & Responsibilities''' ==
+== '''Team Members and Responsibilities''' ==
 
 '''Gitlab Project Link''' - [https://gitlab.com/coder137/can-ster_truck  '''CAN-STER Truck''']
 <BR/>
@@ -419,13 +419,26 @@
 
 <BR/>
 
-== Printed Circuit Board  ==
-<Picture and information, including links to your PCB>
-<br>
+== '''Printed Circuit Board'''  ==
 
-<HR>
+=== Design And Architecture ===
+=== Power Section===
+=== Fabrication ===
+=== Challenges ===
+
+
+[[File:CMPE243 S20 T2 EasyEDA.png|1040x1200px|thumb|center|PCB Layout Design in EasyEDA]]
+[[File:CMPE243 S20 T2 PCB SCHEMATIC.jpg|1041x495px|thumb|center|PCB Schematic]]
+
+<div><ul> 
+<li style="display: inline-block;"> [[File:CMPE243 S20 T2 PCBFRONT.jpg|thumb|none|600px|PCB Top Layer]] </li>
+<li style="display: inline-block;"> [[File:CMPE243 S20 T2 PCBBACK.jpg|thumb|none|600px|PCB Bottom Layer]] </li>
+</ul></div>
+
+<BR>
 <BR/>
-== CAN Communication ==
+
+== '''CAN Communication''' ==
 <Talk about your message IDs or communication strategy, such as periodic transmission, MIA management etc.>
 
 === Hardware Design ===
