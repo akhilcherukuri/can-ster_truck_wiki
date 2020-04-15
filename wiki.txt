@@ -1,4 +1,4 @@
-[[File:CMPE243_S20_T2_Canster_Truck_Logo.png|thumb|425px|caption|right|CAN-STER TRUCK LOGO]]
+[[File:CMPE243_S20_T2_Canster_Truck_Logo.png|thumb|455px|caption|right|CAN-STER TRUCK LOGO]]
 
 == '''Abstract''' ==
 '''The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS, and CAN modules) was divided among six team members. The aim of the project is to develop an autonomous RC Car which can navigate from the source location to a selected destination by avoiding obstacles in its path using sensors and motors.'''
@@ -17,6 +17,14 @@
 * <font color= "32CD32 ">'''Android Application'''</font color>
 * <font color= "F1C40F"> '''Testing & Code Review'''</font color>
 
+'''RC Car Objectives'''
+      '''<font color= "8911B9">1. Driver and LCD Controller</font color>''' - Handles algorithms for obstacle avoidance, route maneuvering, and waypoints
+      '''<font color= "052EFA">2. Geological Controller</font color>''' - Recieves coordinates from GPS and Heading from Compass for navigation 
+      '''<font color= "00CED1">3. Motor Controller</font color>''' - Controls movements of the RC Car 
+      '''<font color= "DF7C24">4. Bridge and Sensor Controller</font color>''' - Detects surrounding objects and interfaces android application to controller via bluetooth
+'''Team Objectives'''
+
+[[File:CMPE243_S20_T2_High_Level_System_Diagram.png|thumb|center|800px| High Level System Diagram]]
 
 <BR/>
 
@@ -27,6 +35,7 @@
 
 *'''Niket Naidu''' [https://www.linkedin.com/in/niket-naidu-30090a134/  LinkedIn] [https://gitlab.com/coder137  Gitlab] 
 ** <font color= "052EFA">'''Geological Controller'''</font color>
+** <font color= "8911B9">'''Driver and LCD Controller'''</font color>
 ** <font color= "F1C40F"> '''Testing & Code Review'''</font color>
 ** <font color= "32CD32 ">'''Android Application'''</font color>
 
@@ -42,10 +51,12 @@
 *'''Akhil Cherukuri''' [https://www.linkedin.com/in/akhilcherukuri/  LinkedIn] [https://gitlab.com/akhilcherukuri  Gitlab]
 ** <font color= "32CD32 ">'''Android Application'''</font color>
 ** <font color= "052EFA">'''Geological Controller'''</font color>
+** <font color="A52A2A">'''Hardware Integration'''</font color>
 
 *'''Ashish Anant Ladage''' [https://www.linkedin.com/in/ashish-anant-ladage-7bb3a214b/  LinkedIn] [https://gitlab.com/ashishladage1  Gitlab] 
 ** <font color= "8911B9">'''Driver and LCD Controller'''</font color>
 ** <font color="A52A2A">'''Hardware Integration'''</font color>
+** <font color= "00CED1">'''Motor Controller'''</font color>
 
 *'''Jesus De Haro De Reza''' [https://www.linkedin.com/in/jesus-de-haro-66342424/  LinkedIn] [https://gitlab.com/deharo27  Gitlab]
 ** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
@@ -243,7 +254,7 @@
 *
 *
 *<font color="green">'''Completed'''</font>
-*
+*<font color="blue">'''In Progress'''</font>
 *<font color="blue">'''In Progress'''</font>
 *
 *
@@ -328,8 +339,8 @@
 ! scope="row"| 1
 | '''Microcontroller Boards'''
 | SJ2 Boards (Purchased from Preet Kang)
-| 5
-| $250.00
+| 4
+| $200.00
 |-
 ! scope="row"| 2
 | '''CAN Transceivers''' 
@@ -415,6 +426,14 @@
 | ~
 | $48.07
 |-
+! scope="row"|
+| 
+| 
+| '''Total'''
+| '''$1025.17'''
+|-
+
+
 |}
 
 <BR/>
@@ -435,11 +454,10 @@
 <li style="display: inline-block;"> [[File:CMPE243 S20 T2 PCBBACK.jpg|thumb|none|600px|PCB Bottom Layer]] </li>
 </ul></div>
 
-<BR>
 <BR/>
 
 == '''CAN Communication''' ==
-<Talk about your message IDs or communication strategy, such as periodic transmission, MIA management etc.>
+<Talk about your message IDs or communication strategy, such as periodic transmission, MIA management, etc.>
 
 === Hardware Design ===
 <Show your CAN bus hardware design>
@@ -588,10 +606,9 @@ VAL_ 102 GEO_HEARTBEAT_cmd 2 "GEO_HEARTBEAT_cmd_REBOOT" 1 "GEO_HEARTBEAT_cmd_SYN
 VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_cmd_SYNC" 0 "MOTOR_HEARTBEAT_cmd_NOOP" ;
 </pre>
 
-<HR>
 <BR/>
 
-== Sensor ECU ==
+== '''Motor Controller''' ==
 <Picture and link to Gitlab>
 
 === Hardware Design ===
@@ -605,21 +622,8 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 
 <HR>
 <BR/>
-== Motor ECU ==
-<Picture and link to Gitlab>
 
-=== Hardware Design ===
-
-=== Software Design ===
-<List the code modules that are being called periodically.>
-
-=== Technical Challenges ===
-
-< List of problems and their detailed resolutions>
-
-<HR>
-<BR/>
-== Geographical Controller ==
+== '''Geological Controller''' ==
 
 <Picture and link to Gitlab>
 
@@ -635,9 +639,37 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 <HR>
 <BR/>
 
+== '''Sensor  [Bridge and Sensor Controller]''' ==
+<Picture and link to Gitlab>
+
+==== Hardware Design ====
+
+==== Software Design ====
+<List the code modules that are being called periodically.>
+
+==== Technical Challenges ====
+
+< List of problems and their detailed resolutions>
+
 <HR>
 <BR/>
-== Communication Bridge Controller & LCD ==
+
+== '''Bridge  [Bridge and Sensor Controller]'''==
+<Picture and link to Gitlab>
+
+==== Hardware Design ====
+
+==== Software Design ====
+<List the code modules that are being called periodically.>
+
+==== Technical Challenges ====
+
+< List of problems and their detailed resolutions>
+
+<HR>
+<BR/>
+
+== '''Driver  [Driver and LCD Controller]''' ==
 <Picture and link to Gitlab>
 
 === Hardware Design ===
@@ -651,8 +683,8 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 
 <HR>
 <BR/>
-== Master Module ==
 
+== '''LCD  [Driver and LCD Controller]''' ==
 <Picture and link to Gitlab>
 
 === Hardware Design ===
@@ -666,7 +698,8 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 
 <HR>
 <BR/>
-== Mobile Application ==
+
+== '''Android Application''' ==
 <Picture and link to Gitlab>
 
 === Hardware Design ===
@@ -678,12 +711,10 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 
 < List of problems and their detailed resolutions>
 
+<HR>
+<BR/>
 
-<BR/>
-<HR>
-<HR>
-<BR/>
-== Conclusion ==
+== '''Conclusion''' ==
 <Organized summary of the project>
 
 <What did you learn?>
@@ -697,4 +728,19 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 
 === Acknowledgement ===
 
-=== References ===
+<HR>
+<BR/>
+
+== '''References''' ==
+
+===Motor Controller===
+
+===Geological Controller===
+
+===Bridge and Sensor Controller===
+
+===Driver and LCD Controller===
+
+===Android===
+
+===Hardware Integration===
