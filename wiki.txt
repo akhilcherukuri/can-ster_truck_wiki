@@ -1,7 +1,7 @@
 [[File:CMPE243_S20_T2_Canster_Truck_Logo.png|thumb|455px|caption|right|CAN-STER TRUCK LOGO]]
 
 == '''Abstract''' ==
-'''The CAN-STER Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS, and CAN modules) was divided among six team members. The aim of the project is to develop an autonomous RC Car which can navigate from the source location to a selected destination by avoiding obstacles in its path using sensors and motors.'''
+'''The Canster Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS, Compass and CAN modules) was divided among six team members. The aim of the project is to develop an autonomous RC Car which can navigate from one source location to the selected destination on the app by avoiding obstacles in its path using sensors. Waypoints algorithm is used as the path finding technique.'''
 
 <BR/>
 
@@ -30,7 +30,7 @@
 
 == '''Team Members and Responsibilities''' ==
 
-'''Gitlab Project Link''' - [https://gitlab.com/coder137/can-ster_truck  '''CAN-STER Truck''']
+'''Gitlab Project Link''' - [https://gitlab.com/coder137/can-ster_truck  '''Canster Truck''']
 <BR/>
 
 *'''Niket Naidu''' [https://www.linkedin.com/in/niket-naidu-30090a134/  LinkedIn] [https://gitlab.com/coder137  Gitlab] 
@@ -40,15 +40,16 @@
 ** <font color= "32CD32 ">'''Android Application'''</font color>
 
 *'''Ganesh Ram Pamadi''' [https://www.linkedin.com/in/ganeshram93/  LinkedIn] [https://gitlab.com/ganeshram2493  Gitlab]
-** <font color= "00CED1">'''Motor Controller'''</font color>
 ** <font color="A52A2A">'''Hardware Integration'''</font color>
 ** <font color= "F1C40F"> '''Testing & Code Review'''</font color>
+** <font color= "00CED1">'''Driver Controller'''</font color>
+** <font color= "052EFA">'''Motor Controller'''</font color>
 
 *'''Nikhil Pabbisetty'''  [https://www.linkedin.com/in/nikhilpabbisetty/  LinkedIn] [https://gitlab.com/nikhilpeoria  Gitlab]
 ** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
 ** <font color= "00CED1">'''Motor Controller'''</font color>
 
-*'''Akhil Cherukuri''' [https://www.linkedin.com/in/akhilcherukuri/  LinkedIn] [https://gitlab.com/akhilcherukuri  Gitlab]
+*'''Akhil Cherukuri''' [https://www.linkedin.com/in/akhilcherukuri/  LinkedIn] [https://gitlab.com/akhilcherukuri  Gitlab] [https://github.com/akhilcherukuri Github]
 ** <font color= "32CD32 ">'''Android Application'''</font color>
 ** <font color= "052EFA">'''Geological Controller'''</font color>
 ** <font color="A52A2A">'''Hardware Integration'''</font color>
@@ -208,7 +209,7 @@
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="green">'''Completed'''</font>
+*<font color="blue">'''In Progress'''</font>
 *<font color="green">'''Completed'''</font>
 |-
 
@@ -251,14 +252,14 @@
 *<font color= "DF7C24">'''Bridge: Establish two way communication between android application and bluetooth module''' </font>
 *'''Update Bill of Materials for miscellaneous hardware'''
 |
-*
-*
+*<font color="blue">'''In Progress'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="blue">'''In Progress'''</font>
 *<font color="blue">'''In Progress'''</font>
-*
-*
-*
+*<font color="blue">'''In Progress'''</font>
+*<font color="blue">'''In Progress'''</font>
 *<font color="blue">'''In Progress'''</font>
 |-
 
@@ -273,12 +274,12 @@
 *<font color= "DF7C24">'''Bridge: Configure HC-05 for auto reconnection if bluetooth communication disconnects''' </font>
 *'''Add multiple debug messages and transmit on CAN'''
 |
-*
-*
-*
-*
-*
-*
+*<font color="blue">'''In Progress'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="blue">'''In Progress'''</font>
+*<font color="blue">'''In Progress'''</font>
 |-
 
 ! scope="row"| '''11'''
@@ -290,8 +291,8 @@
 *'''Continuously test the whole system and handling of corner cases (outside).'''
 *'''Finalize RC Car For Project Proto 1'''
 |
-*
-*
+*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
 *
 *
 |-
@@ -410,9 +411,9 @@
 |-
 ! scope="row"| 13
 | '''GPS Antenna'''  
-| Generic
+| [https://www.amazon.com/dp/B07RRT615K/ GPS Antenna A1-UX]
 | 1
-| $
+| $10.98
 |-
 ! scope="row"| 14
 | '''PCB Fabrication''' 
@@ -430,7 +431,7 @@
 | 
 | 
 | '''Total'''
-| '''$1025.17'''
+| '''$1036.15'''
 |-
 
 
@@ -438,16 +439,50 @@
 
 <BR/>
 
-== '''Printed Circuit Board'''  ==
+== '''Printed Circuit Board''' ==
 
 === Design And Architecture ===
+The complete PCB (for boards and hardware peripherals) was designed using EasyEDA online software. The 4 nodes will be communicating via CAN bus and other peripherals are connected to the PCB via headers.
+
 === Power Section===
+We have 2 power banks supplying our system. And the Servo Motor, RPM sensor and DC rear Motor (via ESC) are powered using LiPo battery (6 volts).
+* Power bank #1 - Subset 2
+
+* Power bank #2 - Subset 1, Subset 3, Bluetooth
+
+'''NOTE:'''
+
+'''Subset 1:'''
+ 1. LIDAR
+ 2. LCD
+ 3. Compass
+
+'''Subset 2:'''
+ 1. Motor node
+ 2. Driver node
+ 3. BS node
+
+'''Subset 3:'''
+ 1. Geo node
+ 2. Back ultrasonic sensor
+
 === Fabrication ===
+* PCB was sent to fabrication to JLCPCB China which provided PCB with MOQ of 5 and 2 layers of PCB with common grounded the entire copper area.
+'''DRC elements'''
+* Track Width = 12
+* Clearance = 10
+* Via Diameter = 24
+* Via Drill Diameter = 12
+
 === Challenges ===
+* Auto-routing gave lot of challenges (only ~60% success) and sometimes the online server even crashes and faces downtime. Even local routing had lot of issues. So make sure to plan your design accordingly.
+* We started our PCB design well ahead of the project. So lot of pre-planning had to be done with regard to final hardware and placement of components in order to avoid spending extra time and money while re-ordering.
+* The PCB went through a lot of internal revisions even before placing order. This was time-consuming.
+<br><br>
 
 
 [[File:CMPE243 S20 T2 EasyEDA.png|1040x1200px|thumb|center|PCB Layout Design in EasyEDA]]
-[[File:CMPE243 S20 T2 PCB SCHEMATIC.jpg|1041x495px|thumb|center|PCB Schematic]]
+[[File:CMPE243 S20 T2 PCB SCHEMATIC.jpg|1041x550px|thumb|center|PCB Schematic]]
 
 <div><ul> 
 <li style="display: inline-block;"> [[File:CMPE243 S20 T2 PCBFRONT.jpg|thumb|none|600px|PCB Top Layer]] </li>
@@ -469,7 +504,7 @@ DBC FILE: [https://gitlab.com/coder137/can-ster_truck/-/blob/dbc-improvements/pr
 <pre>
 VERSION ""
 
-NS_ :
+NS_:
 	BA_
 	BA_DEF_
 	BA_DEF_DEF_
@@ -503,85 +538,146 @@ BS_:
 
 BU_: DBG DRIVER IO MOTOR SENSOR GEO
 
-
 BO_ 100 DRIVER_HEARTBEAT: 1 DRIVER
- SG_ DRIVER_HEARTBEAT_cmd : 0|8@1+ (1,0) [0|0] "" SENSOR,MOTOR
+ SG_ DRIVER_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" GEO,MOTOR,SENSOR
 
-BO_ 101 SENSOR_HEARTBEAT: 1 SENSOR
- SG_ SENSOR_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER,GEO
+BO_ 101 GEO_HEARTBEAT: 1 GEO
+ SG_ GEO_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER,MOTOR,SENSOR
 
-BO_ 102 GEO_HEARTBEAT: 1 GEO
- SG_ GEO_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER,SENSOR
+BO_ 102 MOTOR_HEARTBEAT: 1 MOTOR
+ SG_ MOTOR_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER,GEO,SENSOR
 
-BO_ 103 MOTOR_HEARTBEAT: 1 MOTOR
- SG_ MOTOR_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER
+BO_ 103 SENSOR_HEARTBEAT: 1 SENSOR
+ SG_ SENSOR_HEARTBEAT_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER,GEO,MOTOR
 
-BO_ 200 SENSOR_SONARS: 4 SENSOR
- SG_ SENSOR_SONARS_left : 0|10@1+ (1,0) [0|800] "inch" DRIVER
- SG_ SENSOR_SONARS_right : 10|10@1+ (1,0) [0|0] "inch" DRIVER
- SG_ SENSOR_SONARS_middle : 20|10@1+ (1,0) [0|0] "inch" DRIVER
+BO_ 200 MOTOR_STEERING: 1 DRIVER
+ SG_ MOTOR_STEERING_direction: 0|8@1- (1,0) [-2|2] "" MOTOR
 
-BO_ 210 SENSOR_LIDAR: 8 SENSOR
- SG_ SENSOR_LIDAR_middle: 0|16@1+ (1,0) [0|0] "" DRIVER
- SG_ SENSOR_LIDAR_slight_left: 16|16@1+ (1,0) [0|0] "" DRIVER
- SG_ SENSOR_LIDAR_slight_right: 32|16@1+ (1,0) [0|0] "" DRIVER
- SG_ SENSOR_LIDAR_back: 48|16@1+ (1,0) [0|0] "" DRIVER
+BO_ 210 DRIVER_COORDINATES: 8 DRIVER
+ SG_ DRIVER_COORDINATES_latitude: 0|32@1- (0.000001,-90) [-90|90] "degrees" GEO
+ SG_ DRIVER_COORDINATES_longitude: 32|32@1- (0.000001,-180) [-180|180] "degrees" GEO
 
-BO_ 220 SENSOR_BT_COORDINATES: 8 SENSOR
- SG_ SENSOR_BT_COORDINATES_latitude: 0|32@1+ (0.0001,0) [0|0] "" GEO
- SG_ SENSOR_BT_COORDINATES_longitude: 32|32@1+ (0.0001,0) [0|0] "" GEO
+BO_ 220 MOTOR_SPEED: 1 DRIVER
+ SG_ MOTOR_SPEED_processed: 0|8@1- (1,0) [-3|3] "" MOTOR
 
 BO_ 300 GEO_DEGREE: 8 GEO
- SG_ GEO_DEGREE_current: 0|32@1+ (0.1,0) [0|0] "" DRIVER
- SG_ GEO_DEGREE_required: 32|32@1+ (0.1,0) [0|0] "" DRIVER
+ SG_ GEO_DEGREE_current: 0|32@1+ (0.000001,0) [0|360] "degrees" DRIVER
+ SG_ GEO_DEGREE_required: 32|32@1+ (0.000001,0) [0|360] "degrees" DRIVER
 
-BO_ 400 DRIVER_STEERING: 8 DRIVER
- SG_ DRIVER_STEERING_direction: 0|8@1- (1,0) [-2|2] "" MOTOR
- SG_ DRIVER_STEERING_speed: 8|32@1+ (0.1, 0) [0|60] "kph" MOTOR
+BO_ 310 GEO_DESTINATION_REACHED: 1 GEO
+ SG_ GEO_DESTINATION_REACHED_cmd: 0|8@1+ (1,0) [0|0] "" DRIVER
 
-BO_ 500 MOTOR_INFO: 4 MOTOR
- SG_ MOTOR_INFO_rpm: 0|32@1+ (0.1,0) [0|0] "" DRIVER
+BO_ 400 MOTOR_SPEED_FEEDBACK: 4 MOTOR
+ SG_ MOTOR_SPEED_current: 0|32@1+ (0.1,0) [0|60] "kph" DRIVER
 
-CM_ BU_ DRIVER "The driver controller driving the car";
+BO_ 500 SENSOR_BT_COORDINATES: 8 SENSOR
+ SG_ SENSOR_BT_COORDINATES_latitude: 0|32@1- (0.000001,-90) [-90|90] "degrees" GEO
+ SG_ SENSOR_BT_COORDINATES_longitude: 32|32@1- (0.000001,-180) [-180|180] "degrees" GEO
+
+BO_ 510 SENSOR_SONARS: 8 SENSOR
+ SG_ SENSOR_SONARS_left: 0|21@1+ (0.001,0) [0|0] "cm" DRIVER
+ SG_ SENSOR_SONARS_right: 21|21@1+ (0.001,0) [0|0] "cm" DRIVER
+ SG_ SENSOR_SONARS_middle: 42|21@1+ (0.001,0) [0|0] "cm" DRIVER
+
+BO_ 520 SENSOR_LIDAR: 8 SENSOR
+ SG_ SENSOR_LIDAR_middle: 0|16@1+ (1,0) [0|0] "cm" DRIVER
+ SG_ SENSOR_LIDAR_slight_left: 16|16@1+ (1,0) [0|0] "cm" DRIVER
+ SG_ SENSOR_LIDAR_slight_right: 32|16@1+ (1,0) [0|0] "cm" DRIVER
+ SG_ SENSOR_LIDAR_back: 48|16@1+ (1,0) [0|0] "cm" DRIVER
+
+BO_ 530 MOTOR_KEY: 1 SENSOR
+ SG_ MOTOR_KEY_val: 0|8@1+ (1,0) [0|0] "" DRIVER
+
+BO_ 900 GEO_CURRENT_COORDINATES: 8 GEO
+ SG_ GEO_CURRENT_COORDINATES_latitude: 0|32@1- (0.000001,-90) [-90|90] "degrees" DBG
+ SG_ GEO_CURRENT_COORDINATES_longitude: 32|32@1- (0.000001,-180) [-180|180] "degrees" DBG
+
+BO_ 901 GEO_DISTANCE_FROM_DESTINATION: 4 GEO
+ SG_ GEO_distance_from_destination: 0|32@1+ (0.001,0) [0|0] "meters" DBG
+
+BO_ 902 MOTOR_INFO_DBG: 4 MOTOR
+ SG_ MOTOR_INFO_DBG_rps: 0|16@1+ (1,0) [0|0] "" DBG
+ SG_ MOTOR_INFO_DBG_pwm: 16|16@1+ (0.001,0) [0|0] "" DBG
+
+BO_ 903 LIPO_BATTERY_VOLTAGE_DBG: 4 MOTOR
+ SG_ LIPO_BATTERY_VOLTAGE_val: 0|32@1+ (0.01,0) [0|0] "volts" DBG
+
+BO_ 904 CURRENT_CHECKPOINT_DBG: 1 GEO
+ SG_ CURRENT_CHECKPOINT_val: 0|8@1+ (1,0) [0|0] "" DBG
+
+CM_ "--BU (Network Node) Information--";
+CM_ BU_ DRIVER "The driver controller of the car";
+CM_ BU_ GEO "The geo controller of the car";
 CM_ BU_ MOTOR "The motor controller of the car";
 CM_ BU_ SENSOR "The sensor controller of the car";
-CM_ BU_ GEO "The geo controller of the car";
 
+CM_ "--BO (Message) Information--";
 CM_ BO_ 100 "Driver Sync message used to synchronize the controllers";
-CM_ BO_ 101 "Sensor Sync message used to synchronize the controllers";
-CM_ BO_ 102 "Geo Sync message used to synchronize the controllers";
-CM_ BO_ 103 "Motor Sync message used to synchronize the controllers";
-CM_ BO_ 200 "Ultrasonic Sensor values sent by Sensor Node";
-CM_ BO_ 210 "Lidar Sector values sent by Sensor Node";
-CM_ BO_ 220 "Coordinate BT values sent by Sensor Node";
-CM_ BO_ 300 "Current and computed degree values sent by Geo Node";
-CM_ BO_ 400 "Steering direction and speed values sent by Driver Node";
-CM_ BO_ 500 "Information values sent by Motor Node";
+CM_ BO_ 101 "Geo Sync message used to synchronize the controllers";
+CM_ BO_ 102 "Motor Sync message used to synchronize the controllers";
+CM_ BO_ 103 "Sensor Sync message used to synchronize the controllers";
 
-CM_ SG_ 100 DRIVER_HEARTBEAT_cmd "Heartbeat command from the driver";
-CM_ SG_ 101 SENSOR_HEARTBEAT_cmd "Heartbeat command from the sensor";
-CM_ SG_ 102 GEO_HEARTBEAT_cmd "Heartbeat command from the geological node";
-CM_ SG_ 103 MOTOR_HEARTBEAT_cmd "Heartbeat command from the motor";
+CM_ BO_ 200 "Steering direction values sent by Driver Node to Motor Node";
+CM_ BO_ 210 "Driver Destination coordinates sent by Driver Node";
+CM_ BO_ 220 "Required motor speed computed from Driver Node to Motor Node";
 
-CM_ SG_ 200 SENSOR_SONARS_left "Ultrasonic Sensor attached to the left side";
-CM_ SG_ 200 SENSOR_SONARS_right "Ultrasonic Sensor attached to the right side";
-CM_ SG_ 200 SENSOR_SONARS_middle "Ultrasonic Sensor attached to the middle";
+CM_ BO_ 300 "Current and computer/required degree values sent by Geo Node";
+CM_ BO_ 310 "Indicator signal to check if the RC car has reached the destination";
 
-CM_ SG_ 210 SENSOR_LIDAR_middle "Lidar sensing the middle sector (-15 to 15)";
-CM_ SG_ 210 SENSOR_LIDAR_slight_left "Lidar sensing the slight left sector (-45 to -15)";
-CM_ SG_ 210 SENSOR_LIDAR_slight_right "Lidar sensing the slight right sector (15 to 45)";
-CM_ SG_ 210 SENSOR_LIDAR_back "Lidar sensing the back of the car (165 to 195)";
+CM_ BO_ 400 "Current motor info (rps and kph) sent as feedback to the Driver Node";
 
-CM_ SG_ 220 SENSOR_BT_COORDINATES_latitude "Destination Latitude received over Bluetooth";
-CM_ SG_ 220 SENSOR_BT_COORDINATES_longitude "Destination Longitude received over Bluetooth";
+CM_ BO_ 500 "Coordinate BT values (destination coordinates) sent by Sensor Node";
+CM_ BO_ 510 "LIDAR - Distance from obstacle detected in each sector";
+CM_ BO_ 520 "Ultrasonic Sensor - Distance from obstacle detected by each sensor";
+CM_ BO_ 530 "Start/Stop signal from the Bluetooth app";
 
+CM_ BO_ 900 "Destination coordinates for BUSMASTER debugging";
+CM_ BO_ 901 "Distance from destination";
+CM_ BO_ 902 "Supplied PWM value to the motor and its RPM";
+CM_ BO_ 903 "LIPO Battery Voltage";
+CM_ BO_ 904 "Current checkpoint of the car";
+
+CM_ "--SG (Signal) Information for Heartbeats--";
+CM_ SG_ 100 DRIVER_HEARTBEAT_cmd "Heartbeat command from the driver node";
+CM_ SG_ 101 GEO_HEARTBEAT_cmd "Heartbeat command from the geological node";
+CM_ SG_ 102 MOTOR_HEARTBEAT_cmd "Heartbeat command from the motor node";
+CM_ SG_ 103 SENSOR_HEARTBEAT_cmd "Heartbeat command from the sensor node";
+
+CM_ "--SG (Signal) Information for DRIVER Node--";
+CM_ SG_ 200 DRIVER_STEERING_direction "Calculated Driver Steering values (-2,2) for Motor";
+CM_ SG_ 210 DRIVER_COORDINATES_latitude "Destination Latitude coordinate";
+CM_ SG_ 210 DRIVER_COORDINATES_longitude "Destination Longitude coordinate";
+CM_ SG_ 220 MOTOR_SPEED "Calculated Driver speed values (-3,3) for Motor";
+
+CM_ "--SG (Signal) Information for GEO Node--";
 CM_ SG_ 300 GEO_DEGREE_current "Current Geo Degree relative to true north";
 CM_ SG_ 300 GEO_DEGREE_required "Calculated Geo Degree computed by Haversine Formula";
+CM_ SG_ 310 GEO_DESTINATION_REACHED "Indicator signal to check if the RC car has reached the destination";
 
-CM_ SG_ 400 DRIVER_STEERING_direction "Calculated Driver Steering values for Motor";
-CM_ SG_ 400 DRIVER_STEERING_speed "Calculated Driver speed values for Motor";
+CM_ "--SG (Signal) Information for MOTOR Node--";
+CM_ SG_ 400 MOTOR_SPEED_FEEDBACK "Feedback speed (kph) sent by Motor Node";
 
-CM_ SG_ 500 MOTOR_INFO_rpm "Feedback RPM (speed) sent by Motor";
+CM_ "--SG (Signal) Information for SENSOR Node--";
+CM_ SG_ 500 SENSOR_BT_COORDINATES_latitude "Destination Latitude received over Bluetooth";
+CM_ SG_ 500 SENSOR_BT_COORDINATES_longitude "Destination Longitude received over Bluetooth";
+CM_ SG_ 510 SENSOR_SONARS_left "Ultrasonic Sensor attached to the left side";
+CM_ SG_ 510 SENSOR_SONARS_right "Ultrasonic Sensor attached to the right side";
+CM_ SG_ 510 SENSOR_SONARS_middle "Ultrasonic Sensor attached to the middle";
+CM_ SG_ 510 SENSOR_SONARS_back_left "Ultrasonic Sensor attached to the back left side";
+CM_ SG_ 510 SENSOR_SONARS_back_right "Ultrasonic Sensor attached to the back right side";
+CM_ SG_ 520 SENSOR_LIDAR_middle "Lidar sensing the middle sector (-15 to 15 degrees)";
+CM_ SG_ 520 SENSOR_LIDAR_slight_left "Lidar sensing the slight left sector (-45 to -15 degrees)";
+CM_ SG_ 520 SENSOR_LIDAR_slight_right "Lidar sensing the slight right sector (15 to 45 degrees)";
+CM_ SG_ 520 SENSOR_LIDAR_back "Lidar sensing the back of the car (165 to 195 degrees)";
+CM_ SG_ 530 MOTOR_KEY_val "1 -> Start the motor from the app, 0 -> Stop";
+
+CM_ SG_ 900 GEO_CURRENT_COORDINATES_latitude "Current Latitude";
+CM_ SG_ 900 GEO_CURRENT_COORDINATES_longitude "Current Longitude";
+CM_ SG_ 901 GEO_distance_from_destination "Distance from destination";
+CM_ SG_ 902 MOTOR_INFO_DBG_rps "Current RPS value of the motor";
+CM_ SG_ 902 MOTOR_INFO_DBG_pwm "Supplied motor PWM value";
+CM_ SG_ 903 LIPO_BATTERY_VOLTAGE_val "LIPO Battery Voltage";
+CM_ SG_ 904 CURRENT_CHECKPOINT_val "Current checkpoint of the car";
 
 BA_DEF_ "BusType" STRING ;
 BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
@@ -593,17 +689,23 @@ BA_DEF_DEF_ "GenMsgCycleTime" 0;
 
 BA_ "GenMsgCycleTime" BO_ 100 1000;
 BA_ "GenMsgCycleTime" BO_ 200 50;
-
 BA_ "FieldType" SG_ 100 DRIVER_HEARTBEAT_cmd "DRIVER_HEARTBEAT_cmd";
-BA_ "FieldType" SG_ 101 SENSOR_HEARTBEAT_cmd "SENSOR_HEARTBEAT_cmd";
 BA_ "FieldType" SG_ 102 GEO_HEARTBEAT_cmd "GEO_HEARTBEAT_cmd";
 BA_ "FieldType" SG_ 103 MOTOR_HEARTBEAT_cmd "MOTOR_HEARTBEAT_cmd";
+BA_ "FieldType" SG_ 104 SENSOR_HEARTBEAT_cmd "SENSOR_HEARTBEAT_cmd";
 
+BA_ "FieldType" SG_ 200 MOTOR_STEERING "MOTOR_STEERING";
+BA_ "FieldType" SG_ 230 MOTOR_SPEED_val "MOTOR_SPEED_val";
+BA_ "FieldType" SG_ 310 GEO_DESTINATION_REACHED_cmd "GEO_DESTINATION_REACHED_cmd";
 
 VAL_ 100 DRIVER_HEARTBEAT_cmd 2 "DRIVER_HEARTBEAT_cmd_REBOOT" 1 "DRIVER_HEARTBEAT_cmd_SYNC" 0 "DRIVER_HEARTBEAT_cmd_NOOP" ;
-VAL_ 101 SENSOR_HEARTBEAT_cmd 2 "SENSOR_HEARTBEAT_cmd_REBOOT" 1 "SENSOR_HEARTBEAT_cmd_SYNC" 0 "SENSOR_HEARTBEAT_cmd_NOOP" ;
-VAL_ 102 GEO_HEARTBEAT_cmd 2 "GEO_HEARTBEAT_cmd_REBOOT" 1 "GEO_HEARTBEAT_cmd_SYNC" 0 "GEO_HEARTBEAT_cmd_NOOP" ;
-VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_cmd_SYNC" 0 "MOTOR_HEARTBEAT_cmd_NOOP" ;
+VAL_ 101 GEO_HEARTBEAT_cmd 2 "GEO_HEARTBEAT_cmd_REBOOT" 1 "GEO_HEARTBEAT_cmd_SYNC" 0 "GEO_HEARTBEAT_cmd_NOOP";
+VAL_ 102 MOTOR_HEARTBEAT_cmd 20 "MOTOR_HEARTBEAT_cmd_REBOOT" 10 "MOTOR_HEARTBEAT_cmd_SYNC" 0 "MOTOR_HEARTBEAT_cmd_NOOP" ;
+VAL_ 103 SENSOR_HEARTBEAT_cmd 200 "SENSOR_HEARTBEAT_cmd_REBOOT" 100 "SENSOR_HEARTBEAT_cmd_SYNC" 0 "SENSOR_HEARTBEAT_cmd_NOOP" ;
+
+VAL_ 200 MOTOR_STEERING_direction -2 "MOTOR_STEERING_hard_left" -1 "MOTOR_STEERING_slight_left" 0 "MOTOR_STEERING_straight" 1 "MOTOR_STEERING_slight_right" 2 "MOTOR_STEERING_hard_right";
+VAL_ 220 MOTOR_SPEED_processed -3 "MOTOR_SPEED_reverse_fast" -2 "MOTOR_SPEED_reverse_medium" -1 "MOTOR_SPEED_reverse_slow" 0 "MOTOR_SPEED_neutral" 1 "MOTOR_SPEED_forward_slow" 2 "MOTOR_SPEED_forward_medium" 3 "MOTOR_SPEED_forward_fast";
+VAL_ 310 GEO_DESTINATION_REACHED_cmd 1 "GEO_DESTINATION_REACHED_cmd_REACHED" 0 "GEO_DESTINATION_REACHED_cmd_NOT_REACHED";
 </pre>
 
 <BR/>
@@ -628,6 +730,8 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 <Picture and link to Gitlab>
 
 === Hardware Design ===
+
+[[File:CMPE243_S20_T2_GEO1.png|thumb|center|650px| Geological Diagram]]
 
 === Software Design ===
 <List the code modules that are being called periodically.>
@@ -657,14 +761,31 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 == '''Bridge  [Bridge and Sensor Controller]'''==
 <Picture and link to Gitlab>
 
-==== Hardware Design ====
+Bridge functionality of the Bridge and Sensor Controller is to establish wireless communication between the SJ-2 Board and the android mobile device using the HC-05 Bluetooth module. The Bridge controller will be receiving start command with destination GEO coordinates and stop command. The Bridge controller will be transmitting the required sensor data and debug information to be displayed on the android application.
+
+
+=='''Ultrasonic Sensor'''==
+====Hardware Design====
+This sensor uses ultrasonic beam to measure the distances. Based on the time taken between when the beam is sent and received back to the sensor, the distance is calculated in the node.
+Apart from 5v and GND, this sensor has 2 pins ECHO and TRIG which are interfaced to the SJ-Two board via GPIO.
+
+[[File:CMPE243_S20_T2_CansterTruck_ultrasonic_sensor.jpg|thumb|center|300px| Ultrasonic Sensor Diagram]]
+
+====Software Design====
+* Init the GPIO pin connected to TRIG of the sensor as output and for ECHO as input port.
+* Attach the interrupt on the ECHO input port.
+* Store the system_clock_count before setting the trigger pulse and then set the pulse. Also keep monitoring the input port.
+* Take the system_clock_count at the instant of receiving the interrupt.
+Distance = (system_clock_count_at_trig - system_clock_count_after_at_echo) / 57.14
+
+[[File:CMPE243_S20_T2_BRIDGE.png|thumb|center|500px| Bridge Diagram]]
 
 ==== Software Design ====
 <List the code modules that are being called periodically.>
 
 ==== Technical Challenges ====
 
-< List of problems and their detailed resolutions>
+<List of problems and their detailed resolutions>
 
 <HR>
 <BR/>
@@ -700,36 +821,42 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 <BR/>
 
 == '''Android Application''' ==
-<Picture and link to Gitlab>
-
-=== Hardware Design ===
-
+[https://gitlab.com/akhilcherukuri/can-ster_truck_application Gitlab]
 === Software Design ===
+
+[[File:CMPE243_S20_T2_BLUETOOTHFLOWCHART.png|thumb|center|650px| Android Application Flowchart]]
+
 <List the code modules that are being called periodically.>
 
 === Technical Challenges ===
 
-< List of problems and their detailed resolutions>
-
 <HR>
+
+'''Other hardware challenges:'''
+* Figuring out why various hardware peripherals (GPS, Bluetooth, LIDAR and Ultrasonic sensor) started to malfunction (devices were on but values were either inconsistent / not occurring), took a lot of time to debug. It was due to insufficient power.
+
 <BR/>
 
 == '''Conclusion''' ==
-<Organized summary of the project>
-
-<What did you learn?>
+CMPE243 gives one of the best experiences one could ever get in their academic life. The course is designed to give an insight into how the industry functions and enhances both technical and management skills. Apart from learning how to work and implement application of CAN protocol, one can get a hands-on experience with version control, unit-testing and software design. Overall it was a very great journey.
 
 === Project Video ===
 
 === Project Source Code ===
 
 === Advise for Future Students ===
-<Bullet points and discussion>
+'''GENERAL:'''
+* Form your team and start the project as early as you can.
+* Clearly discuss what role each individual should do and ensure that progress is regularly tracked so that the team doesn't fall back on any schedule.
+* Since lot of code and hardware integration is involved with this project, make sure testing is thoroughly and periodically done and make note of all the issues found.
+'''HARDWARE:'''
+* Decide on how you would power up the peripherals. We had issues with Bluetooth (not connecting), GPS (lock not happening) and LIDAR (giving incorrect values). After lot of cycles of hardware and software debugging, we found that the issue was with power. Choose wisely as to which peripherals must be connected to which power bank.
+* PCB design is time consuming as there is a lot of hardware components involved and a huge responsibility falls on the designer to know the about each component. Coordinating with multiple team members and verifying with them if their respective hardware is correct takes a lot of time. So start well ahead.
+* Make sure to expose some extra GPIO and GND pins for future use.
 
 === Acknowledgement ===
-
 <HR>
-<BR/>
+Firstly we would like to express our gratitude to Professor Preetpal Kang for his guidance throughout the semester and providing us with this opportunity. We would also like to thank the ISA members Vignesh Kumar Venkateshwar and Aakash Vrajlal Chitroda for being available whenever in need and guiding us to complete the project.
 
 == '''References''' ==
 
@@ -742,5 +869,9 @@ VAL_ 103 MOTOR_HEARTBEAT_cmd 2 "MOTOR_HEARTBEAT_cmd_REBOOT" 1 "MOTOR_HEARTBEAT_c
 ===Driver and LCD Controller===
 
 ===Android===
+*Youtube Channel: [https://www.youtube.com/channel/UCoNZZLhPuuRteu02rh7bzsw Coding with Mitch]
+*Android Developers: [https://developer.android.com/guide/topics/connectivity/bluetooth Website][https://github.com/googlearchive/android-BluetoothChat Github]
+*Udemy Course: [https://www.udemy.com/course/the-complete-android-oreo-developer-course/ Complete Android Oreo Developer Course]
 
-===Hardware Integration===
+===PCB Design===
+*EDC Tool: [https://easyeda.com/ EasyEDA]
