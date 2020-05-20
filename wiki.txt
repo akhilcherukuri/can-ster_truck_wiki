@@ -824,6 +824,37 @@ Distance = (system_clock_count_at_trig - system_clock_count_after_at_echo) / 57.
 [https://gitlab.com/akhilcherukuri/can-ster_truck_application Gitlab]
 === Software Design ===
 
+The application consists of a total of 5 Activities:
+
+*'''Main Activity:'''
+**This is the app launch display screen
+**It will check for all the required permission onStart().
+**Has search button for connecting from a paired device list view
+**Once device is clicked, an intent will start the Map Activity 
+*'''Map Activity:'''
+** For this requirement we are using the Google Maps Fragment, for the map fragment to function we must request an API key from Google and set the key in the manifest of the application.
+** Destination marker(Red Marker) is set using setOnMapClickListener to which the car will navigate to, the destination can be changed by clicking elsewhere on the Map Fragment. The marker can be removed using setOnMarkerClickListener.
+** When the start button is pressed, the start command identifier along with destination latitude and longitude is sent to the car via the write thread. A background thread is started along with it to indicate the current car's position(Green Marker) along with a plotline between the current position and destination.
+** When the stop button is pressed, the stop command identifier is sent to the car, to stop and turn off the car.
+*'''Info Activity:'''
+** Messages from Geological, Driver, Motor coming from CAN bus are decoded by the Sensor and Bridge controller and sent to the Android application as a string. 
+** The received string is parsed and categorizes the data to store it in the required textView to be displayed. 
+** Bluetooth status, Lidar Values, Ultrasonic Sensor Values, Motor Speed, Motor RPM, Motor PWM, Cars' current location, Compass Heading, Distance till Destination, Checkpoint Index is displayed. This was useful for debugging purposes and allowed us to avoid scanning the mounted LCD or CAN Busmaster on PC during drives.
+*'''Debug Activity:'''
+**The main function of this activity is to check all RAW RX and RAW TX messages and create a log of all the data received and sent. 
+*'''Bluetooth Connection Service Activity''' :
+**This is the background activity that handles all the threads required for transmission and receiving data using Bluetooth connections. It has 3 running threads which is called inside other activities using a handler:
+** Accept Thread - Listens to BluetoothServerSocket using listenUsingRfcommWithServiceRecord. In order for the RF communication socket to connect to the HC-05, we used the following UUID: 00001101-0000-1000-8000-00805F9B34FB. This is a generic SSP Bluetooth UUID that enables the socket to directly connected to HC-05 and maintain the connection.
+** Connect Thread - Creates a Bluetooth socket using createRfcommSocketToServiceRecord
+** Connected Thread - Creates socket.getInputStream(); and socket.getOutputStream(); when bytes are available in input stream it will read them into a buffer. 
+***All messages for activities are done by Handler mHandler.obtainMessage(); mHandler.sendMessage();
+
+*'''Receieved string''':
+** A String is sent to the Bluetooth app from HC-05 and when it receives a string with identifier "$canster", the message is prased accordingly by using the string delimiter ',' and is ended by the newline character '\n' which will remove the data from StringBuffer.
+** Example: $canster,37.339334,-121.881123,37.338713,-121.880685,10.123,20.133,30.123,10.5,88.1,99.2,-2,1,44,7,11,22,33,-3,23\n
+
+
+
 [[File:CMPE243_S20_T2_BLUETOOTHFLOWCHART.png|thumb|center|650px| Android Application Flowchart]]
 
 <List the code modules that are being called periodically.>
