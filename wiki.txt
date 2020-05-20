@@ -824,6 +824,15 @@ Distance = (system_clock_count_at_trig - system_clock_count_after_at_echo) / 57.
 [https://gitlab.com/akhilcherukuri/can-ster_truck_application Gitlab]
 === Software Design ===
 
+<div><ul> 
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android1.jpg|thumb|none|250px|Splash Screen]]</li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android2.jpg|thumb|none|250px|Main Activity Screen]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android3.jpg|thumb|none|250px|Map Activity Screen]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android4.jpg|thumb|none|250px|Info Activity Screen 1]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android5.jpg|thumb|none|250px|Info Activity Screen 1]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android6.jpg |thumb|none|250px|Debug Activity Screen]]</li>
+</ul></div>
+
 The application consists of a total of 5 Activities:
 
 *'''Main Activity:'''
