@@ -34,10 +34,10 @@
 <BR/>
 
 *'''Niket Naidu''' [https://www.linkedin.com/in/niket-naidu-30090a134/  LinkedIn] [https://gitlab.com/coder137  Gitlab] 
-** <font color= "052EFA">'''Geological Controller'''</font color>
-** <font color= "8911B9">'''Driver and LCD Controller'''</font color>
+** <font color= "052EFA">'''Geological Controller'''</font color> : Waypoint Algorithm, Haversine and Bearing Angle logic 
+** <font color= "8911B9">'''Driver and LCD Controller'''</font color> : GLCD
+** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color> : Bluetooth
 ** <font color= "F1C40F"> '''Testing & Code Review'''</font color>
-** <font color= "32CD32 ">'''Android Application'''</font color>
 
 *'''Ganesh Ram Pamadi''' [https://www.linkedin.com/in/ganeshram93/  LinkedIn] [https://gitlab.com/ganeshram2493  Gitlab]
 ** <font color="A52A2A">'''Hardware Integration'''</font color>
@@ -51,8 +51,7 @@
 
 *'''Akhil Cherukuri''' [https://www.linkedin.com/in/akhilcherukuri/  LinkedIn] [https://gitlab.com/akhilcherukuri  Gitlab] [https://github.com/akhilcherukuri Github]
 ** <font color= "32CD32 ">'''Android Application'''</font color>
-** <font color= "052EFA">'''Geological Controller'''</font color>
-** <font color="A52A2A">'''Hardware Integration'''</font color>
+** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
 
 *'''Ashish Anant Ladage''' [https://www.linkedin.com/in/ashish-anant-ladage-7bb3a214b/  LinkedIn] [https://gitlab.com/ashishladage1  Gitlab] 
 ** <font color= "8911B9">'''Driver and LCD Controller'''</font color>
@@ -478,6 +477,10 @@ We have 2 power banks supplying our system. And the Servo Motor, RPM sensor and 
 * Auto-routing gave lot of challenges (only ~60% success) and sometimes the online server even crashes and faces downtime. Even local routing had lot of issues. So make sure to plan your design accordingly.
 * We started our PCB design well ahead of the project. So lot of pre-planning had to be done with regard to final hardware and placement of components in order to avoid spending extra time and money while re-ordering.
 * The PCB went through a lot of internal revisions even before placing order. This was time-consuming.
+
+'''Other hardware challenges:'''
+* Figuring out why various hardware peripherals (GPS, Bluetooth, LIDAR and Ultrasonic sensor) started to malfunction (devices were on but values were either inconsistent / not occurring), took a lot of time to debug. It was due to insufficient power.
+
 <br><br>
 
 
@@ -729,16 +732,131 @@ VAL_ 310 GEO_DESTINATION_REACHED_cmd 1 "GEO_DESTINATION_REACHED_cmd_REACHED" 0 "
 
 <Picture and link to Gitlab>
 
+===Messages===
+*GEO_HEARTBEAT: Used to check for MIA by other nodes. Highest priority message for GEO Node
+
+*GEO_DEGREE: Sends the current degree relative to the North Pole computed by the Compass and the Required degree relative to the North Pole computed by Bearing Angle using the Current Coordinate and Destination Coordinate.
+
+*GEO_DESTINATION_REACHED: Sets a flag, 0 for destination not reached and 1 for destination reached
+
+*GEO_CURRENT_COORDINATES: Debug Message used to send the Current GPS Coordinates
+
+*GEO_DISTANCE_FROM_DESTINATION: Debug message used to send the Distance from Destination
+
+*CURRENT_CHECKPOINT_DBG: Debug message used to check which checkpoint is being navigated to
+
 === Hardware Design ===
 
 [[File:CMPE243_S20_T2_GEO1.png|thumb|center|650px| Geological Diagram]]
 
 === Software Design ===
-<List the code modules that are being called periodically.>
+=====Overview=====
+*Inside the `periodic_callback__initialize`
+**Initialize the CAN BUS
+**Initialize the GPS
+
+*Inside the `periodic_callback__1hz`
+**Handle all MIA (from other Nodes)
+**Update GPS LED when init and in case of failure
+**Compute the GEO LOGIC for Waypoints algorithm once every second (1000 ms)
+
+*Inside the `periodic_callback__10hz`
+**Handle CAN Incoming messages (Decode)
+**Transmit CAN Geo messages (Encode and send)
+**Compute the GPS Coordinate
+
+=====GPS Initialization=====
+GPS Initialization activates the Hardware GPIO (RX and TX), FreeRTOS Queue for UART Interrupts (UART Module) and Line Buffer Module to parse each GPS line.
+
+=====GPS Data Parsing=====
+The GPS Hardware module transmits an NMEA string over UART to the SJTwo Board. We read each character one by one and add it to the Line Buffer module.
+Inside its computation loop, the Line Buffer module checks if a newline character has been received.
+When a newline character has been received the entire string is extracted from the line buffer module and parsed according to its identifier ($GPRMC, $GPGGA) received and parsed into individual tokens.
+For our purposes the $GPRMC NMEA string was the most appropriate and it helped us extract the Current Latitude Longitude as well as the Valid/Invalid tag for the Canster Truck.
+
+=====GPS LED Indication for debugging=====
+
+A simple module that checks for the GPRMC GPS Message and extracts the A or V valid (Tag). If $GPRMC NMEA string is valid, LED is set, else LED is reset. This gives us onsite debugging capabilities to know if GPS has locked onto a satellite signal.
+
+=====GEO Logic Module Computation=====
+The GEO Logic Module computes the Bearing Angle, Haversine Distance as well as the Waypoints algorithm.
+
+'''Bearing Angle:'''
+
+Formula:	θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
+
+where	φ1,λ1 is the start point, φ2,λ2 the endpoint (Δλ is the difference in longitude)
+
+Since atan2 returns values in the range -π ... +π (that is, -180° ... +180°), to normalize the result to a compass bearing (in the range 0° ... 360°, with −ve values transformed into the range 180° ... 360°), convert to degrees and then use (θ+360) % 360, where % is (floating point) modulo.
+For final bearing, simply take the initial bearing from the endpoint to the start point and reverse it (using θ = (θ+180) % 360).
+
+The above article reference gives us the required bearing angle that our car must align itself to, to reach a particular destination coordinate from its current coordinate.
+The Steering of the Canster Truck depends on the above-computed angle values.
+
+'''Haversine Distance Formula:'''
+
+This uses the ‘haversine’ formula to calculate the great-circle distance between two points – that is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance between the points (ignoring any hills they fly over, of course!).
+
+	a = sin²(Δφ/2) + cos φ1 ⋅ cos φ2 ⋅ sin²(Δλ/2)
+
+	c = 2 ⋅ atan2( √a, √(1−a) )
+
+	d = R ⋅ c
+
+where	φ is latitude, λ is longitude, R is earth’s radius (mean radius = 6,371km);
+note that angles need to be in radians to pass to trig functions!
+
+The above formula is used to calculate the distance between the source coordinate (received via GPS) and the destination coordinate.
+Later this was used to compute the distance between source coordinate and each individual checkpoint to traverse the shortest distance.
+
+'''Waypoints Algorithm:'''
+
+The Waypoints algorithm that was chosen was a slightly modified version of Djikstra’s Algorithm.
+3 values were calculated before the final computation
+-	Distance between source and final destination (DISTsd)
+-	Distance between source and each individual checkpoint (DISTsc)
+-	Distance between each individual checkpoint and the final destination. (DISTcd)
+If DISTsd was lesser than DISTcd, this checkpoint was discarded (we continue in the loop). Since we would be moving in the opposite direction, rather than towards the final destination.
+If DISTsd was greater than DISTcd, then we checked the nearest checkpoint to the source.
+The minimum value was set initial that was equal to DISTsd.
+If DISTsc was lesser than the minimum value stored, DISTsc would become the new minimum value, and the checkpoint index and coordinates would be appropriately stored and returned from the function.
+In this way we would navigate to the nearest checkpoint from the source, while also making sure NOT to travel in the opposite direction.
+This logic is recomputed only when we reach the checkpoint selected and the algorithm runs again to find the next checkpoint that we need to navigate to.
+
+=====CAN Decode Destination Coordinates=====
+Destination Coordinates are received from the Bridge and Sensor Node and transmitted over the CAN Bus. The value is decoded and stored in the GEO Logic Module.
+This is a very important value since our entire GEO Logic calculations are based on the Destination Coordinate.
+
+=====CAN Encode and Send=====
+
+The main messages that were transmitter are
+#Geo Degree
+#Geo Destination Reached
+#Distance from Destination Debug and Checkpoint Index debug
+
+'''Geo Degree Computation as per Waypoints Algorithm:'''
+
+Geo Degree was computed as per the current coordinates and the most recently computed checkpoint coordinates. This bearing angle calculation w.r.t computed checkpoint would continue till we do not reach that particular checkpoint.
+Once we reach the computed checkpoint, Waypoint algorithm is recomputed as per the process mentioned above and the algorithm runs again.
+
+'''Geo Destination Reached:'''
+
+An Area of around 4 meters was set around the destination coordinate to check if the destination had been reached. 
+This measurement was taken into consideration to allow for the loss in precision when transmitting data over CAN as well as any irregularities that might occur when getting values from the GPS.
+Having an area of 4 meters was very accurate for all of our test runs.
+
+'''Geo Distance from Destination Debug and Checkpoint Index Debug:'''
+
+Getting debug information was very critical to speed up our development process. In this case we could actively see if our algorithm worked properly.
+The Geo Distance from Destination was used to see if we were moving closer to our destination or veering further away from it.
+The Checkpoint Index was used to see which checkpoint index we were traveling to. By knowing the placements of the Individual checkpoints we could manually as well as programmatically (via Android application) verify the working of our Canster Truck.
 
 === Technical Challenges ===
+#DBC Challenge for GEO Coordinates -> Could not encode more than 5-6 decimal places at a time, on later investigation we found that the 10000 is an int value, however 100000 overflows the int value. 
+#Creating an efficient algorithm for Waypoints, O(n) complexity.
+#Getting appropriate fixes for GPS when not in a completely open space.
+#GPS used to fluctuate or stop giving values when Battery voltage went below a particular threshold. Always supply 3.3V constantly at a good amperage.
 
-< List of problems and their detailed resolutions>
 
 <HR>
 <BR/>
@@ -746,14 +864,52 @@ VAL_ 310 GEO_DESTINATION_REACHED_cmd 1 "GEO_DESTINATION_REACHED_cmd_REACHED" 0 "
 == '''Sensor  [Bridge and Sensor Controller]''' ==
 <Picture and link to Gitlab>
 
-==== Hardware Design ====
+==='''Ultrasonic Sensor'''===
+====Hardware Design====
+This sensor uses an ultrasonic beam to measure the distances. Based on the time taken between when the beam is sent and received back to the sensor, the distance is calculated in the node.
+Apart from 5v and GND, this sensor has 2 pins ECHO and TRIG which are interfaced with the SJ-Two board via GPIO.
 
-==== Software Design ====
-<List the code modules that are being called periodically.>
+[[File:CMPE243_S20_T2_CansterTruck_ultrasonic_sensor.jpg|thumb|center|300px| Ultrasonic Sensor Diagram]]
 
-==== Technical Challenges ====
+====Software Design====
+* Init the GPIO pin connected to TRIG of the sensor as output and for ECHO as an input port.
+* Attach the interrupt on the ECHO input port.
+* Store the system_clock_count before setting the trigger pulse and then set the pulse. Also keep monitoring the input port.
+* Take the system_clock_count at the instant of receiving the interrupt.
+Distance = (system_clock_count_at_trig - system_clock_count_after_at_echo) / 57.14
 
-< List of problems and their detailed resolutions>
+==='''Lidar Sensor'''===
+====Hardware Design====
+====Software Design====
+In terms of the lidar, the SJ2 initializes GPIO, UART, and memory for storing the measurement values. After initialization, the command to begin scanning is sent. Here, we wait for the lidar to send a response packet, letting the host (SJ2 board) know it received the command. The response packet the lidar sends will be 7 bytes. If the correct 7 bytes are not received, the command will be sent again. 
+
+[[File:CMPE243_S20_T2_Canster Truck_Lidar_flow.jpeg|thumb|center|200px| Lidar Flow]]
+
+Following the response packet, the lidar begins sending 5-byte measurement data. Each sample contains a distance measurement (in millimeters) and the angle (with respect to the lidar) in which it was taken. The data packet structure is shown in the following figure. In addition to containing the distance and angle, the packet includes a quality value, to indicate the reliability of the measurement, and three check bits (S, ~S, and C). As the data is received via UART, we wait until we have 5 bytes before continuing to process. Before processing the 5 bytes after receiving them, the check bits are confirmed to be correct. If they are incorrect, it will not be processed and we will wait for another sample to be received.
+
+[[File:CMPE243_S20_T2_Canster Truck_DataPacketStructure.JPG|thumb|center|200px| Data Packet Structure]]
+
+In the case the sample is correct, each measurement value that is in a direction of interest will be placed in an array designated to one of four directions (left, right, front, rear). Each of these directions have their own sector in the lidar’s 360-degree view. 
+
+Right sector: 11°-30°
+Rear sector: 170°-190°
+Left sector: 330°-349°
+Front sector: 350°-370° (or 10°)
+The arrays mentioned will hold roughly 20 measurements, which are every degree in the sector. In the event, objects are too far to measure, the lidar will report 0 mm. distance. Since there is no measurable obstacle, a “large” distance value of 3000 mm. is placed in the array. The smallest distance value will be taken from each array and reported to the driver node for obstacle avoidance.
+
+=== Technical Challenges ===
+====Ultrasonic====
+====Lidar====
+*'''Datasheet not 100% clear:'''  The correct datasheet for the was a bit difficult to obtain, and the manufacturer needed to be contacted. The first document found online was high level and general information about the sensor, but the manufacturer did provide another document that contained the information of the commands and responses to and from the lidar, and their packet structure. The documents did not clearly state the angles with respect to the lidar are fixed, which left me wondering if the lidar will think the direction it is facing when powered on will become the new “zeroth” angle. 
+
+*'''UART Buffer Overflow:''' When first interfacing with the sensor, the incoming bytes of the lidar were printed on to the terminal to make sure there was a response and to make sense of the information. Since the command we sent results in 5 bytes of data per measurement samples from the lidar and the lidar measured 2000 times per second, there are will be roughly 10k Bytes per second of data incoming that need to be handled continuously. With an improperly sized UART buffer and print statements it is guaranteed to occur, making the lidar data look like random values. 
+
+*'''Proper Parsing of Measurement Data:''' After sending a command to the lidar, the sensor will send a response packet, followed by the measurement data. The initial response from the lidar is a 7-byte packet, followed by continuous 5-byte measurement samples. I needed to make sure however I handled the response would be independent of how the measurement is handled, so as not to create a potential unwanted offset when receiving measurements. 
+
+*'''Object Detection with Received Data:''' Once proper communication was set up with the lidar and measurement data was getting decoded, there needed to be a way to measure when obstacles were present. If ~360 measurements are handled entirely independently from one another, it could become a complex and confusing code. To achieve a simple approach, four sectors about 20 degrees in size were used to represent the front, left, right, and rear directions. 
+
+*'''Bugs in Code:'''  When first implementing the code, there were a few bugs from typos, incorrect numbers, and some faulty logic that were found with the use of unit testing. Unit testing helped find these issues and verified the logic was correct, and I would say gave me 90% confidence in my lidar handling.
+
 
 <HR>
 <BR/>
@@ -764,19 +920,7 @@ VAL_ 310 GEO_DESTINATION_REACHED_cmd 1 "GEO_DESTINATION_REACHED_cmd_REACHED" 0 "
 Bridge functionality of the Bridge and Sensor Controller is to establish wireless communication between the SJ-2 Board and the android mobile device using the HC-05 Bluetooth module. The Bridge controller will be receiving start command with destination GEO coordinates and stop command. The Bridge controller will be transmitting the required sensor data and debug information to be displayed on the android application.
 
 
-=='''Ultrasonic Sensor'''==
-====Hardware Design====
-This sensor uses ultrasonic beam to measure the distances. Based on the time taken between when the beam is sent and received back to the sensor, the distance is calculated in the node.
-Apart from 5v and GND, this sensor has 2 pins ECHO and TRIG which are interfaced to the SJ-Two board via GPIO.
 
-[[File:CMPE243_S20_T2_CansterTruck_ultrasonic_sensor.jpg|thumb|center|300px| Ultrasonic Sensor Diagram]]
-
-====Software Design====
-* Init the GPIO pin connected to TRIG of the sensor as output and for ECHO as input port.
-* Attach the interrupt on the ECHO input port.
-* Store the system_clock_count before setting the trigger pulse and then set the pulse. Also keep monitoring the input port.
-* Take the system_clock_count at the instant of receiving the interrupt.
-Distance = (system_clock_count_at_trig - system_clock_count_after_at_echo) / 57.14
 
 [[File:CMPE243_S20_T2_BRIDGE.png|thumb|center|500px| Bridge Diagram]]
 
@@ -866,15 +1010,9 @@ The application consists of a total of 5 Activities:
 
 [[File:CMPE243_S20_T2_BLUETOOTHFLOWCHART.png|thumb|center|650px| Android Application Flowchart]]
 
-<List the code modules that are being called periodically.>
-
 === Technical Challenges ===
 
 <HR>
-
-'''Other hardware challenges:'''
-* Figuring out why various hardware peripherals (GPS, Bluetooth, LIDAR and Ultrasonic sensor) started to malfunction (devices were on but values were either inconsistent / not occurring), took a lot of time to debug. It was due to insufficient power.
-
 <BR/>
 
 == '''Conclusion''' ==
@@ -903,6 +1041,7 @@ Firstly we would like to express our gratitude to Professor Preetpal Kang for hi
 ===Motor Controller===
 
 ===Geological Controller===
+* Movable Scripts: [https://www.movable-type.co.uk/scripts/latlong.html Calculate distance, bearing and more between Latitude/Longitude points]]
 
 ===Bridge and Sensor Controller===
 
