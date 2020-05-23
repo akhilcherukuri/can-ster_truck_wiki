@@ -1,9 +1,8 @@
 [[File:CMPE243_S20_T2_Canster_Truck_Logo.png|thumb|455px|caption|right|CAN-STER TRUCK LOGO]]
 
 == '''Abstract''' ==
-'''The Canster Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS, Compass and CAN modules) was divided among six team members. The aim of the project is to develop an autonomous RC Car which can navigate from one source location to the selected destination on the app by avoiding obstacles in its path using sensors. Waypoints algorithm is used as the path finding technique.'''
-
-<BR/>
+The Canster Truck Project is an autonomous RC car with CAN Bus interfaced controllers. The development of the RC car's subsystem modules (Interfacing of Ultrasonic Sensor, LIDAR, Bluetooth, GPS, Compass and CAN modules) was divided among six team members. The aim of the project is to develop an autonomous RC Car which can navigate from one source location to the selected destination on the app by avoiding obstacles in its path using sensors. Waypoints algorithm is used as the path finding technique.
+<br>
 
 == '''Introduction and Objectives''' ==
 
@@ -29,12 +28,13 @@
 <BR/>
 
 == '''Team Members and Responsibilities''' ==
+[[File:CMPE243_S20_T2_Canster Truck_Team.jpg|thumb|center|800px| Group Picture]]
 
 '''Gitlab Project Link''' - [https://gitlab.com/coder137/can-ster_truck  '''Canster Truck''']
 <BR/>
 
 *'''Niket Naidu''' [https://www.linkedin.com/in/niket-naidu-30090a134/  LinkedIn] [https://gitlab.com/coder137  Gitlab] 
-** <font color= "052EFA">'''Geological Controller'''</font color> : Waypoint Algorithm, Haversine and Bearing Angle logic 
+** <font color= "052EFA">'''Geological Controller'''</font color> : GPS, Compass, Waypoint Algorithm, Haversine and Bearing Angle logic 
 ** <font color= "8911B9">'''Driver and LCD Controller'''</font color> : GLCD
 ** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color> : Bluetooth
 ** <font color= "F1C40F"> '''Testing & Code Review'''</font color>
@@ -48,6 +48,8 @@
 *'''Nikhil Pabbisetty'''  [https://www.linkedin.com/in/nikhilpabbisetty/  LinkedIn] [https://gitlab.com/nikhilpeoria  Gitlab]
 ** <font color= "DF7C24">'''Bridge and Sensor Controller'''</font color>
 ** <font color= "00CED1">'''Motor Controller'''</font color>
+** <font color= "8911B9">'''Driver and LCD Controller'''</font color>
+** <font color="A52A2A">'''Hardware Integration'''</font color>
 
 *'''Akhil Cherukuri''' [https://www.linkedin.com/in/akhilcherukuri/  LinkedIn] [https://gitlab.com/akhilcherukuri  Gitlab] [https://github.com/akhilcherukuri Github]
 ** <font color= "32CD32 ">'''Android Application'''</font color>
@@ -208,7 +210,7 @@
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
 |-
 
@@ -228,13 +230,13 @@
 |
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="blue">'''In Progress'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
 ! scope="row"| '''9'''
@@ -251,15 +253,15 @@
 *<font color= "DF7C24">'''Bridge: Establish two way communication between android application and bluetooth module''' </font>
 *'''Update Bill of Materials for miscellaneous hardware'''
 |
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
 *<font color="green">'''Completed'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
 ! scope="row"| '''10'''
@@ -273,12 +275,12 @@
 *<font color= "DF7C24">'''Bridge: Configure HC-05 for auto reconnection if bluetooth communication disconnects''' </font>
 *'''Add multiple debug messages and transmit on CAN'''
 |
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
 *<font color="green">'''Completed'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
-*<font color="blue">'''In Progress'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
 ! scope="row"| '''11'''
@@ -290,10 +292,10 @@
 *'''Continuously test the whole system and handling of corner cases (outside).'''
 *'''Finalize RC Car For Project Proto 1'''
 |
-*<font color="blue">'''In Progress'''</font>
 *<font color="green">'''Completed'''</font>
-*
-*
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
 ! scope="row"| '''12'''
@@ -306,11 +308,11 @@
 *May 1st: Project Presentation
 *'''Finalize RC Car for Project Proto 2'''
 |
-*
-*
-*
-*
-*
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 
 ! scope="row"| '''13'''
@@ -320,8 +322,8 @@
 * '''Complete Individual Contribution Peer Grading'''
 * '''Review and Complete Wiki Project Page'''
 |
-*
-*
+*<font color="green">'''Completed'''</font>
+*<font color="green">'''Completed'''</font>
 |-
 |}
 
@@ -447,7 +449,7 @@ The complete PCB (for boards and hardware peripherals) was designed using EasyED
 We have 2 power banks supplying our system. And the Servo Motor, RPM sensor and DC rear Motor (via ESC) are powered using LiPo battery (6 volts).
 * Power bank #1 - Subset 2
 
-* Power bank #2 - Subset 1, Subset 3, Bluetooth
+* Power bank #2 - Subset 1, Subset 3, Bluetooth Module
 
 '''NOTE:'''
 
@@ -466,8 +468,8 @@ We have 2 power banks supplying our system. And the Servo Motor, RPM sensor and 
  2. Back ultrasonic sensor
 
 === Fabrication ===
-* PCB was sent to fabrication to JLCPCB China which provided PCB with MOQ of 5 and 2 layers of PCB with common grounded the entire copper area.
-'''DRC elements'''
+* PCB was sent to fabrication to JLCPCB China which provided PCB with MOQ of 5 and 2 layers of PCB and common grounded the rest of the copper area.
+'''DRC elements (in mils)'''
 * Track Width = 12
 * Clearance = 10
 * Via Diameter = 24
@@ -481,24 +483,21 @@ We have 2 power banks supplying our system. And the Servo Motor, RPM sensor and 
 '''Other hardware challenges:'''
 * Figuring out why various hardware peripherals (GPS, Bluetooth, LIDAR and Ultrasonic sensor) started to malfunction (devices were on but values were either inconsistent / not occurring), took a lot of time to debug. It was due to insufficient power.
 
-<br><br>
-
-
+<br>
 [[File:CMPE243 S20 T2 EasyEDA.png|1040x1200px|thumb|center|PCB Layout Design in EasyEDA]]
+<br>
 [[File:CMPE243 S20 T2 PCB SCHEMATIC.jpg|1041x550px|thumb|center|PCB Schematic]]
-
-<div><ul> 
-<li style="display: inline-block;"> [[File:CMPE243 S20 T2 PCBFRONT.jpg|thumb|none|600px|PCB Top Layer]] </li>
-<li style="display: inline-block;"> [[File:CMPE243 S20 T2 PCBBACK.jpg|thumb|none|600px|PCB Bottom Layer]] </li>
-</ul></div>
+<br>
+[[File:CMPE243 S20 T2 PCBFRONT.jpg|thumb|center|600px|PCB Top Layer]]
+<br>
+[[File:CMPE243 S20 T2 PCBBACK.jpg|thumb|center|600px|PCB Bottom Layer]]
 
 <BR/>
 
 == '''CAN Communication''' ==
-<Talk about your message IDs or communication strategy, such as periodic transmission, MIA management, etc.>
 
 === Hardware Design ===
-<Show your CAN bus hardware design>
+[[File:CMPE243_S20_T2_Canster_Truck_CANHW.png|thumb|center|770px|  CAN Hardware Diagram]]
 
 === DBC File ===
 
@@ -714,23 +713,268 @@ VAL_ 310 GEO_DESTINATION_REACHED_cmd 1 "GEO_DESTINATION_REACHED_cmd_REACHED" 0 "
 <BR/>
 
 == '''Motor Controller''' ==
-<Picture and link to Gitlab>
+'''[https://gitlab.com/coder137/can-ster_truck/-/tree/motor_bleeding_edge_dev GitLab Link]'''
+
+This controller is used to control the components of the car-related to motor. We can control the speed and steering of the car having interfaced with various components with the SJ-2 board. The servo motor is controlled via PWM and is used to set the steering direction of the car. The DC motor is controlled by the Electronic Speed Controller (ESC) via PWM for speed. We read the speed of the car by using an RPM sensor. By using the RPM sensor values, a feedback loop has been designed to regulate the speed of the car. A state machine has been designed to manage the forward and backward movements of the car. 
+Additionally, a voltage divider circuit has been implemented to read the battery voltage. All motor functionality and CAN message communication is run at 10 Hz. 
 
 === Hardware Design ===
 
+[[File:CMPE243_S20_T2_Canster_Truck_Motor_Hardware.png|thumb|center|750px|  Motor Hardware System]]
+
+The following diagram details the hardware implementation of the motor module with the SJTwo board:
+Hardware Interface
+=====Servo Motor=====
+The servo motor responds to PWM pulses. It has three pins namely Vcc, PWM Input Signal, and GND. The servo is powered using 6V from the car battery. Based on the PWM signal supplied from the SJTwo board the front wheels are turned. 
+[[File:CMPE243_S20_T2_Canster_Truck_Motor_1.jpg|440px|thumb|center|| Servo Motor]]
+{| class="wikitable" style="text-align: center; width: 400px; height: 200px; margin: left;"
+|+ Servo Motor Pin Connection
+|-
+! Sr. No.
+! Wires - Servo Motor
+! Function
+|-
+! 1 
+| PWM Connected to P2.5 || PWM Signal from Sj-2 Board
+|-
+! 2
+| VCC || 6V supply from ESC 
+|-
+! 3
+| GND || Common Ground
+|-
+|}
+
+=====Electronic Speed Controller (ESC)=====
+The ESC is used to control the DC motor. It is supplied power using the 7.4 V LiPo battery. It has three pins namely Vout, PWM Input Signal, and GND. Based on the PWM input signal, the speed and forward, neutral, and backward movements of the car is changed. Vout is given to the RPM sensor and Servo motor.
+[[File:CMPE243_S20_T2_Canster_Truck_Motor_2.jpg|440px|thumb|center|| Electronic Speed Controller (ESC)]]
+{| class="wikitable" style="text-align: center; width: 400px; height: 200px; margin: left;"
+|+ Speed Sensor Pin Connection
+|-
+! Sr. No.
+! Wires - RPM Sensor
+! Function
+|-
+! 1 
+| Signal Wire Connected to P2.0 || GPIO that supplies pulses to controller
+|-
+! 2
+| VCC || 6V supply from ESC 
+|-
+! 3
+| GND || Common Ground
+|-
+|}
+
+=====DC Motor=====
+The DC motor is controlled using the ESC. It has two pins, a positive and a negative terminal.  A PWM signal wire is connected to the microcontroller and the required current is provided by the LiPo battery and the ESC. The DC motor is controlled using PWM at 10Hz.
+
+[[File:CMPE243_S20_T2_Canster_Truck_Motor_3.jpg|320px|thumb|center|| DC Motor]]
+{|
+|-
+|
+{| class="wikitable" style="text-align: center; width: 400px; height: 200px; margin-left:0px;"
+|+ DC Motor Pin Connection
+|-
+! Sr. No.
+! Wires - DC Motor
+! Description
+|-
+! 1 
+| Positive Wire (already connected) || Positive Terminal
+|-
+! 2
+| Negative Wire (already connected || Negative Terminal
+|-
+|}
+<br>
+{| class="wikitable" style="text-align: center; width: 400px; height: 200px;"
+|+ DC Motor Configuration
+|-
+! Operation
+! Pulse Width Range (ms)
+! Duty Cycle(%)
+|-
+! FORWARD 
+| 1.51 - 2.00 || 15.1-20.0
+|-
+! STOP
+| 1.50 || 15.0
+|-
+! REVERSE
+| 1.00 - 1.49 || 10.0-14.9
+|-
+|}
+|
+|-
+|}
+
+Note: First calibrate the DC motor or the motor will not respond to your PWM pulses. For help with calibration go to this [https://traxxas.com/support/Programming-Your-Traxxas-Electronic-Speed-Control website]
+
+=====RPM Sensor=====
+
+The RPM sensor is used to get the current speed of the car. We use the info for creating a feedback loop (PID) for maintaining the speed of the car in uphill and downhill situations. The RPM sensor mounts on the rear DC motor shaft compartment with a special assembly also provided by Traxxas. The magnet which attached to the inner gear generates a pulse each rotation. The sensor works on the hall effect principle where it provides a current across its terminal when placed in a magnet's field. The RPM sensor has three pins namely Vcc, Signal, and GND.
+
+[[File:CMPE243_S20_T2_Canster_Truck_Motor_4.jpg|440px|thumb|center|| RPM Sensor]]
+
+{| class="wikitable" style="text-align: center; width: 400px; height: 200px; margin: left;"
+|+ Speed Sensor Pin Connection
+|-
+! Sr. No.
+! Wires - RPM Sensor
+! Function
+|-
+! 1 
+| Signal Wire Connected to P2.2 || GPIO that supplies pulses to controller
+|-
+! 2
+| VCC || 6V supply from ESC 
+|-
+! 3
+| GND || Common Ground
+|-
+|}
+
 === Software Design ===
-<List the code modules that are being called periodically.>
+
+The software for the motor node was divided into multiple files and made modular to improve readability and understanding of the complex logic involved. The main code modules are for:
+*Servo Motor
+*Electronic Speed Controller
+*RPM Sensor
+*Motor Wrapper
+*Battery Voltage
+
+The motor wrapper module is used to wrap all the code from the esc, servo, and rpm modules into simple to use functions to be called in the periodic tasks. 
+=====Servo Motor=====
+It uses the steering value sent from the driver (-2 to 2) and matches it to the appropriate PWM value for steering. This code module is run at 10Hz. 
+<pre>
+void servo__steer_processor(int16_t steering_value) {
+  switch (steering_value) {
+  case MOTOR_STEERING_hard_left:
+    servo__steer_hard_left();
+    break;
+  case MOTOR_STEERING_slight_left:
+    servo__steer_soft_left();
+    break;
+  case MOTOR_STEERING_straight:
+    servo__steer_straight();
+    break;
+  case MOTOR_STEERING_slight_right:
+    servo__steer_soft_right();
+    break;
+  case MOTOR_STEERING_hard_right:
+    servo__steer_hard_right();
+    break;
+  default:
+    printf("\nDid not receive steering value");
+  }
+}
+</pre>
+=====Electronic Speed Controller=====
+
+This code module is used to control the DC motor. It receives the motor direction value from the driver and sets the appropriate PWM value. Based on the value the motor is commanded to move the car forward or backwards. A switch case is implemented to set PWM values for movement in different directions along with different speeds.
+<pre>
+void esc__direction_processor(int16_t direction_value) {
+  desired_direction_value = direction_value;
+  switch (direction_value) {
+  case MOTOR_SPEED_reverse_fast:
+    esc__reverse_fast();
+    break;
+  case MOTOR_SPEED_reverse_medium:
+    esc__reverse_medium();
+    break;
+  case MOTOR_SPEED_reverse_slow:
+    esc__reverse_slow();
+    break;
+  case MOTOR_SPEED_neutral:
+    esc__neutral();
+    break;
+  case MOTOR_SPEED_forward_slow:
+    esc__forward_slow();
+    break;
+  case MOTOR_SPEED_forward_medium:
+    esc__forward_medium();
+    break;
+  case MOTOR_SPEED_forward_fast:
+    esc__forward_fast();
+    break;
+
+  default:
+    printf("\nDid not receive direction and speed value");
+  }
+}
+</pre>
+
+There is also a feedback loop to control the speed. The ESC code depends on the rpm sensor code for the current speed values. 
+<pre>
+double current_speed = get_speed_kph();
+double desired_speed = desired_speed_kph;
+float adjusted_duty_cycle = 0.0;
+adjusted_duty_cycle = duty_cycle + (speed_to_pwm_adjustment(desired_speed, current_speed));
+</pre>
+
+[[File:CMPE243_S20_T2_Canster_Truck_Motor1.png|thumb|center|500px|  Feedback Loop for Motor Speed]]
+
+=====RPM Sensor=====
+This code module is used to get current speed data from the RPM sensor. It is based on interrupts. When the wheel rotates once, we get one pulse due to the magnet installed. This pulse generates a falling edge interrupt during which we increment the pulse counter. Since, this code is run at 1Hz we collect the number of pulses generated every one second. This gives us the number of rotations per second using which we can calculate the speed in kph.
+<pre>
+  float rpm__calculate_speed_kph() {
+  uint16_t rotation_per_sec = pulse_count;
+  pulse_count = 0;
+  speed_kph = ((CIRCUMFERENCE_METER * rotation_per_sec) * (MPS_TO_KPH_CONVERSION_FACTOR)) / GEAR_RATIO;
+  return speed_kph;
+}
+</pre>
+
+
+=====Motor Wrapper=====
+As mentioned above, the main function of this code module is to wrap all the other code modules and call the right functions at the appropriate frequency. The motor wrapper code also includes a state machine for ensuring a smooth transition between forward to backward state and vice versa. In order to achieve a smooth transition, a series of PWM pulses must be generated at the right time. For example, when the motor is moving from forward to backward state, a reverse value must be given first followed by at least three neutral values, and then continue with reverse values.
+
+[[File:CMPE243_S20_T2_Canster_Truck_Motor2.png|thumb|center|500px|  State Machine Flowchart for Motor Movements]]
+
+=====LiPo Battery Voltage=====
+
+
+The LiPo Battery Voltage was calculated using ADC in Burst Mode. A LiPo Hardware module was created for the same which contained two functions, <code>lipo__init</code> and <code>lipo__get_voltage</code>.
+
+The voltage divider circuit is stepped down from 7.4V to 2.1V using 10K and 4K Resistor pair.
+[[File:ADC FINAL (1).png|thumb|center|400px| Voltage Regulator]]
+'''LiPo Initialization'''
+
+The LiPo Initialization phase initializes the ADC, Enables Burst mode on the ADC pins and configures the Alternate Function Registers for the same.
+
+'''Getting LiPo Voltage'''
+
+We read the raw ADC value from the LPC Hardware register. This value will be from 0 - 3.3V. However due to our voltage divider configuration the max voltage that we should theoretically get is 2.1V. This means that 2.1V corresponds to 7.4V of the LIPO Battery voltage.
+
+The formula used is
+<code>(raw_adc_value * MAX_LIPO_BATTERY_VOLTAGE_VALUE) / MAX_LIPO_ADC_VALUE</code>
 
 === Technical Challenges ===
+<li>Changing movements of the car from Forward to Backward and vice versa
+If you just change the PWM value from say 16 (Forward) to 14(Backward), the DC motor will just stop and will not make wheels turn reverse. We discovered this problem quite late as during the initial testing we had always run the car from the start with either forward or reverse but never tried changing the direction during run-time. 
+<br />
+Solution: The motor requires a series of PWM pulses which is specific to the car to transition from forward mode to reverse mode.  In our case we had to give the PWM pulses in the following sequence. Suppose,
+<ol>
+ <li> Forward (16) (callback_count = 0)</li>
+ <li> Forward (16) (callback_count = 1)</li>
+ <li> Reverse (14) (callback_count = 2)</li>
+ <li> Neutral (15) (callback_count = 3)</li>
+ <li> Neutral (15) (callback_count = 4)</li>
+ <li> Neutral (15) (callback_count = 5)</li>
+ <li> Reverse (14) (callback_count = 6)</li>
+ <li> Continue reverse</li>
+</ol>
+Similarly, the reverse to forward can also be implemented.
+ <li>DC motor shooting off when there is an improper ground connection
+When we connected the battery voltage circuit for reading the voltage from the battery, the motor would randomly shoot off every now and then. 
+<br />
+Solution: Connect the voltage divider circuit to the common ground rather than taking the ground from the ESC.</li>
 
-< List of problems and their detailed resolutions>
-
-<HR>
 <BR/>
 
 == '''Geological Controller''' ==
-
-<Picture and link to Gitlab>
+'''[https://gitlab.com/coder137/can-ster_truck/-/tree/geo_bleeding_edge_dev_waypoints GitLab Link]'''
 
 ===Messages===
 *GEO_HEARTBEAT: Used to check for MIA by other nodes. Highest priority message for GEO Node
@@ -758,12 +1002,26 @@ VAL_ 310 GEO_DESTINATION_REACHED_cmd 1 "GEO_DESTINATION_REACHED_cmd_REACHED" 0 "
 *Inside the `periodic_callback__1hz`
 **Handle all MIA (from other Nodes)
 **Update GPS LED when init and in case of failure
-**Compute the GEO LOGIC for Waypoints algorithm once every second (1000 ms)
+**Compute the GEO logic for Waypoints algorithm once every second (1000 ms)
 
 *Inside the `periodic_callback__10hz`
 **Handle CAN Incoming messages (Decode)
 **Transmit CAN Geo messages (Encode and send)
 **Compute the GPS Coordinate
+
+=====Compass I2C Driver=====
+An online datasheet resource was used to work with the Compass ([https://www.robot-electronics.co.uk/htm/cmps11i2c.htm CMPS11 Datasheet])
+Initially the Compass I2C Driver was tested using the Terminal I2C Helper built by our Professor Preetpal Kang. Using this resource we were quickly able to read various I2C Registers and display it onto the terminal.
+
+For our project the only required part of the Compass was the 16-bit Compass Bearing value (0-3599) i.e 0-359.9 degree values. These values were stored in the 2nd and 3rd register (Register 2 being the High Byte).
+Once the raw data was received over I2C we could easily combine the data
+ 
+<pre>
+uint16_t  bearing_value = (Reg2 << 8) | Reg3;
+float rval = bearing_value / 10.0;
+return rval;
+</pre>
+The returned value were transmitted to the Driver Node to compute its steering based on the required Bearing Angle.
 
 =====GPS Initialization=====
 GPS Initialization activates the Hardware GPIO (RX and TX), FreeRTOS Queue for UART Interrupts (UART Module) and Line Buffer Module to parse each GPS line.
@@ -783,7 +1041,9 @@ The GEO Logic Module computes the Bearing Angle, Haversine Distance as well as t
 
 '''Bearing Angle:'''
 
-Formula:	θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
+<code>
+θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
+</code>
 
 where	φ1,λ1 is the start point, φ2,λ2 the endpoint (Δλ is the difference in longitude)
 
@@ -791,17 +1051,19 @@ Since atan2 returns values in the range -π ... +π (that is, -180° ... +180°)
 For final bearing, simply take the initial bearing from the endpoint to the start point and reverse it (using θ = (θ+180) % 360).
 
 The above article reference gives us the required bearing angle that our car must align itself to, to reach a particular destination coordinate from its current coordinate.
-The Steering of the Canster Truck depends on the above-computed angle values.
+The Steering of the vehicle depends on the above-computed angle values.
 
 '''Haversine Distance Formula:'''
 
 This uses the ‘haversine’ formula to calculate the great-circle distance between two points – that is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance between the points (ignoring any hills they fly over, of course!).
 
+<code>
 	a = sin²(Δφ/2) + cos φ1 ⋅ cos φ2 ⋅ sin²(Δλ/2)
 
 	c = 2 ⋅ atan2( √a, √(1−a) )
 
 	d = R ⋅ c
+</code>
 
 where	φ is latitude, λ is longitude, R is earth’s radius (mean radius = 6,371km);
 note that angles need to be in radians to pass to trig functions!
@@ -813,13 +1075,18 @@ Later this was used to compute the distance between source coordinate and each i
 
 The Waypoints algorithm that was chosen was a slightly modified version of Djikstra’s Algorithm.
 3 values were calculated before the final computation
--	Distance between source and final destination (DISTsd)
--	Distance between source and each individual checkpoint (DISTsc)
--	Distance between each individual checkpoint and the final destination. (DISTcd)
-If DISTsd was lesser than DISTcd, this checkpoint was discarded (we continue in the loop). Since we would be moving in the opposite direction, rather than towards the final destination.
-If DISTsd was greater than DISTcd, then we checked the nearest checkpoint to the source.
-The minimum value was set initial that was equal to DISTsd.
-If DISTsc was lesser than the minimum value stored, DISTsc would become the new minimum value, and the checkpoint index and coordinates would be appropriately stored and returned from the function.
+
+* Distance between source and final destination (DISTsd)
+* Distance between source and each individual checkpoint (DISTsc)
+* Distance between each individual checkpoint and the final destination. (DISTcd)
+
+If '''DISTsd''' was lesser than '''DISTcd''', this checkpoint was discarded (we continue in the loop). Since we would be moving in the opposite direction, rather than towards the final destination.
+
+If '''DISTsd''' was greater than '''DISTcd''', then we checked the nearest checkpoint to the source.
+The minimum value was set initial that was equal to '''DISTsd'''.
+
+If '''DISTsc''' was lesser than the minimum value stored, '''DISTsc''' would become the new minimum value, and the checkpoint index and coordinates would be appropriately stored and returned from the function.
+
 In this way we would navigate to the nearest checkpoint from the source, while also making sure NOT to travel in the opposite direction.
 This logic is recomputed only when we reach the checkpoint selected and the algorithm runs again to find the next checkpoint that we need to navigate to.
 
@@ -857,13 +1124,10 @@ The Checkpoint Index was used to see which checkpoint index we were traveling to
 #Getting appropriate fixes for GPS when not in a completely open space.
 #GPS used to fluctuate or stop giving values when Battery voltage went below a particular threshold. Always supply 3.3V constantly at a good amperage.
 
-
-<HR>
 <BR/>
 
 == '''Sensor  [Bridge and Sensor Controller]''' ==
-<Picture and link to Gitlab>
-
+'''[https://gitlab.com/coder137/can-ster_truck/-/tree/sensor_bleeding_edge_dev GitLab]'''
 ==='''Ultrasonic Sensor'''===
 ====Hardware Design====
 This sensor uses an ultrasonic beam to measure the distances. Based on the time taken between when the beam is sent and received back to the sensor, the distance is calculated in the node.
@@ -880,6 +1144,10 @@ Distance = (system_clock_count_at_trig - system_clock_count_after_at_echo) / 57.
 
 ==='''Lidar Sensor'''===
 ====Hardware Design====
+The RPLidar sensor can be powered from a 5v source and uses UART communication to receive commands and transmit data. It has seven pins to interface with. Two sets of the pins (four total) are for power and ground. The remaining three are for UART receive and transmit, and for making the lidar’s motor spin.
+
+[[File:CMPE243_S20_T2_Canster_Truck_RPLidar_A1.JPG|thumb|center|300px| RPLidar A1]]
+
 ====Software Design====
 In terms of the lidar, the SJ2 initializes GPIO, UART, and memory for storing the measurement values. After initialization, the command to begin scanning is sent. Here, we wait for the lidar to send a response packet, letting the host (SJ2 board) know it received the command. The response packet the lidar sends will be 7 bytes. If the correct 7 bytes are not received, the command will be sent again. 
 
@@ -890,16 +1158,18 @@ Following the response packet, the lidar begins sending 5-byte measurement data.
 [[File:CMPE243_S20_T2_Canster Truck_DataPacketStructure.JPG|thumb|center|200px| Data Packet Structure]]
 
 In the case the sample is correct, each measurement value that is in a direction of interest will be placed in an array designated to one of four directions (left, right, front, rear). Each of these directions have their own sector in the lidar’s 360-degree view. 
+*Right sector: 11° - 30°
+*Rear sector: 170° - 190°
+*Left sector: 330° - 349°
+*Front sector: 350° - 370° (or 10°)
 
-Right sector: 11°-30°
-Rear sector: 170°-190°
-Left sector: 330°-349°
-Front sector: 350°-370° (or 10°)
 The arrays mentioned will hold roughly 20 measurements, which are every degree in the sector. In the event, objects are too far to measure, the lidar will report 0 mm. distance. Since there is no measurable obstacle, a “large” distance value of 3000 mm. is placed in the array. The smallest distance value will be taken from each array and reported to the driver node for obstacle avoidance.
 
 === Technical Challenges ===
-====Ultrasonic====
-====Lidar====
+====Ultrasonic Sensor====
+*'''Power issue''' The pulses were getting triggered incorrectly and it took a while to figure out that it was due to insufficient power.
+
+====LIDAR====
 *'''Datasheet not 100% clear:'''  The correct datasheet for the was a bit difficult to obtain, and the manufacturer needed to be contacted. The first document found online was high level and general information about the sensor, but the manufacturer did provide another document that contained the information of the commands and responses to and from the lidar, and their packet structure. The documents did not clearly state the angles with respect to the lidar are fixed, which left me wondering if the lidar will think the direction it is facing when powered on will become the new “zeroth” angle. 
 
 *'''UART Buffer Overflow:''' When first interfacing with the sensor, the incoming bytes of the lidar were printed on to the terminal to make sure there was a response and to make sense of the information. Since the command we sent results in 5 bytes of data per measurement samples from the lidar and the lidar measured 2000 times per second, there are will be roughly 10k Bytes per second of data incoming that need to be handled continuously. With an improperly sized UART buffer and print statements it is guaranteed to occur, making the lidar data look like random values. 
@@ -910,58 +1180,180 @@ The arrays mentioned will hold roughly 20 measurements, which are every degree i
 
 *'''Bugs in Code:'''  When first implementing the code, there were a few bugs from typos, incorrect numbers, and some faulty logic that were found with the use of unit testing. Unit testing helped find these issues and verified the logic was correct, and I would say gave me 90% confidence in my lidar handling.
 
-
-<HR>
 <BR/>
 
-== '''Bridge  [Bridge and Sensor Controller]'''==
-<Picture and link to Gitlab>
+== '''Bluetooth Module [Bridge and Sensor Controller]'''==
 
 Bridge functionality of the Bridge and Sensor Controller is to establish wireless communication between the SJ-2 Board and the android mobile device using the HC-05 Bluetooth module. The Bridge controller will be receiving start command with destination GEO coordinates and stop command. The Bridge controller will be transmitting the required sensor data and debug information to be displayed on the android application.
-
-
-
 
 [[File:CMPE243_S20_T2_BRIDGE.png|thumb|center|500px| Bridge Diagram]]
 
 ==== Software Design ====
-<List the code modules that are being called periodically.>
+
+'''Low-Level Layer'''
+
+In this layer, similar to the GPS the UART GPIO was initialized (RX, TX), FreeRTOS Queue was initialized for UART Interrupts and the line buffer module was initialized to parse strings.
+
+Two basic functions <code>bt__read</code> and <code>bt__write</code> were implemented.
+As the name suggested, <code>bt__write</code> took a string as its input parameter and transmitted that data to the Android application. <code>bt__read</code> stored the incoming characters into the line buffer, parsed the line received into its identifier and tokens, and invoked a callback function.
+
+Since this was a low-level layer the User would not be directly invoking this library. Instead a '''Bluetooth Wrapper''' module was created which would be invoked and used by the user.
+ 
+
+'''Application Layer'''
+
+The Bluetooth Wrapper module had the appropriate <code>read_once</code> and <code>write_once</code> functions.
+
+The <code>read_once</code> function internally just called the <code>bt__read</code> function. All of the decodings was done inside the Callback Function. 
+To get the Destination coordinate the string received from the Android Application was in the form of 
+<code>$loc,<destination_latitude>,<destination_longitude>.</code>
+Upon receiving this data we parsed the destination_latitude and destination_longitude, which could later be accessed using getters.
+We also set a start flag to notify the Driver Node that destination has been received and we can start steering towards our checkpoints.
+
+Another command implemented was the stop command. 
+<code>$stop</code>
+This was used to send a stop flag to the Driver node.  
+
+The <code>write_once</code> function used the getter methods from each CAN Decode message and update its internal state variables. A CSV String was created using the <code>$canster</code> identifier and various debugging points were appended to this message using a comma.
+On the Android application side this CSV string was tokenized and displayed onto the Application Debug screen appropriately.
 
 ==== Technical Challenges ====
 
-<List of problems and their detailed resolutions>
+'''Bluetooth peripheral not turning on'''
+* We initially connected the Bluetooth module directly to the SJ-Two board with (Vcc = 3.3v). But it was not giving only 2.7v and hence the device did not turn on.
+* We had to connect it to external power source to make it function without hassles.
 
-<HR>
 <BR/>
 
 == '''Driver  [Driver and LCD Controller]''' ==
-<Picture and link to Gitlab>
-
-=== Hardware Design ===
+'''[https://gitlab.com/coder137/can-ster_truck/-/tree/driver_bleeding_edge_dev GitLab]'''
 
 === Software Design ===
-<List the code modules that are being called periodically.>
+
+[[File:CMPE243_S20_T2_Canster Truck_Driver_Flowchart.png|thumb|center|750px|Driver Flowchart]]
+
+The above block diagram explains the process flow of obstacle detection for the car. The LIDAR detects
+the obstacle and depending on the distance of obstacle the car takes a slight right and slight left or a
+hard right and hard left. The state of the car also depends on the value of the LIDAR and ultrasonic sensor.
+The loose ends of the LIDAR for the reverse condition are checked by the ultrasonic sensors. The
+The ultrasonic sensor works on the principle of trigger and echo and can detect the obstacles very close by.
+The range of the Ultrasonic sensor is lower than the LIDAR. Finally, if no obstacle is detected the car goes
+straight until the destination is reached. The speed of the car is also various when an obstacle is detected to
+avoid the crash and the car’s smooth transition from one state to another. The key to the android
+application controls the start and stop the process of the car. If the key is not pressed, then the stays in the
+
+neutral state. The speed of the car is controlled by the changing duty cycle of the input voltage. There
+are seven-speed levels in which the motor can run on. These speed levels are Forward Slow, Medium,
+Fast, Reverse Slow, Medium, Fast, and Neutral. The Neutral is the stop condition with a 0% duty cycle.
 
 === Technical Challenges ===
 
-< List of problems and their detailed resolutions>
+Technical Challenges faced during obstacle detection:
 
-<HR>
+*Due to dimensions of the car and for the perfect obstacle avoidance the values of 100cm and 150cm had to be selected for the turning radius. Hence, it is very important to calibrate these values appropriately, as these values will be unique for different car designs.
+*For a situation, where even if the lidar doesn’t detect any obstacle at the middle, the car must take a slight right or a slight left as per our design. This is the case where the obstacle can be a moving one and that is why the lidar middle couldn’t detect it.
+
 <BR/>
 
 == '''LCD  [Driver and LCD Controller]''' ==
-<Picture and link to Gitlab>
-
 === Hardware Design ===
+[[File:CMPE243_S20_T2_Canster_Truck_LCD_Diagram.png|thumb|600px|center| LCD Design]]
+{|style="text-align: center; width: 400px; height: 200px; margin: auto;"
+|
+[[File:CMPE243_S20_T2_Canster_Truck_GLCD.jpg|thumb|200px|center| GLCD Hardware]]
+||
+[[File:CMPE243_S20_T2_Canster_Truck_GLCD2.jpg|thumb|600px|center| GLCD Software Simulation (Initial Iteration)]]
+|
+|}
 
 === Software Design ===
-<List the code modules that are being called periodically.>
+The GLCD used was created by 4DSystems, using their IDE a UI was created. Each UI component could be controlled by sending UART data targeted at the widget address.
+The best part about this GLCD was that we had a lot of interactive widgets to display debugging information in real-time.
+The GLCD code was divided into 3 parts:
+
+=====Low-Level Initialization=====
+Initialize the low-level hardware interfaces to send and receive data from the GLCD.
+Similar to the GPS and Bluetooth, The UART GPIO was initialized (RX, TX), FreeRTOS Queue was initialized for UART Interrupt and line buffer was used to get a stream of data for parsing.
+
+Low-level '''read''' and '''write''' commands were used as per the working of the GLCD Module.
+When Reading data pertaining to a widget on the GLCD we would need to send a particular response packet.
+
+<pre>
+void lcd__read(lcd_object_e object_id, uint8_t object_index, uint8_t *response, uint16_t *response_data) {
+
+  uint8_t checksum = READ_OBJ ^ object_id ^ object_index;
+  uint8_t buffer[] = {READ_OBJ, object_id, object_index, checksum};
+
+  lcd__write_data(buffer, sizeof(buffer) / sizeof(uint8_t));
+  lcd__read_response_id(response);
+  lcd__read_response_data(response_data);
+}
+</pre>
+
+The response_data returned contains the Widget ID as well as the current value stored on that widget.
+
+ 
+When Writing data pertaining to a widget on a GLCD the process is similar to the above mentioned code.
+<pre>
+void lcd__write(lcd_object_e object_id, uint8_t object_index, uint8_t msb, uint8_t lsb, uint8_t *response) {
+  uint8_t checksum = WRITE_OBJ ^ object_id ^ object_index ^ msb ^ lsb;
+  uint8_t buffer[] = {WRITE_OBJ, object_id, object_index, msb, lsb, checksum};
+
+  lcd__write_data(buffer, sizeof(buffer) / sizeof(uint8_t));
+  lcd__read_response_id(response);
+}
+</pre>
+
+However in this case we receive only an ACK or NACK from the system. ACK would mean that the write to GLCD widget was successful and the widget now stored appropriate values. NACK would mean that a particular error has occurred. The errors could be regarding baud rate, incorrect bit format, incorrect index values, etc.
+
+=====GLCD Wrapper for Widgets=====
+The above low-level code had generic read and write functions. However for our UI we were only using 3 Widgets. All of which had '''different Indexes''' and '''Widget IDs'''.
+Therefore a very simple library was created to easily interface with those widgets
+<pre>
+bool lcd_wrapper__read_led(uint8_t index);
+uint16_t lcd_wrapper__read_meter(uint8_t index);
+uint16_t lcd_wrapper__read_leddigit(uint8_t index);
+
+bool lcd_wrapper__write_led(uint8_t index, bool value);
+bool lcd_wrapper__write_meter(uint8_t index, uint16_t value);
+bool lcd_wrapper__write_leddigit(uint8_t index, uint16_t value);
+</pre>
+
+The above code is self-explanatory read and write functions for '''LED''', '''METER''', and '''LED DIGIT'''.
+
+=====GLCD UI=====
+Now that we had our low level and Widget wrapper working properly, we wanted to create our Dynamic UI as well. The code would need to be robust enough to handle any UI that we create on the GLCD which could be reflected equivalently in our C Code.
+
+<pre>
+static void lcd_ui__update_ui(void) {
+
+  lcd_wrapper__write_led(LCD_LED_DRIVER_MIA_INDEX, driver_mia_led);
+  lcd_wrapper__write_led(LCD_LED_SENSOR_MIA_INDEX, sensor_mia_led);
+  lcd_wrapper__write_led(LCD_LED_GEO_MIA_INDEX, geo_mia_led);
+  lcd_wrapper__write_led(LCD_LED_MOTOR_MIA_INDEX, motor_mia_led);
+
+  // kph is always in the range of 0 - 10
+  lcd_wrapper__write_meter(LCD_METER_KPH_INDEX, kph_meter % 11);
+
+  // These will be in the Range of 0-99
+  lcd_wrapper__write_leddigit(LCD_LEDDIGIT_RPM_INDEX, rpm_leddigit % 100);
+  lcd_wrapper__write_leddigit(LCD_LEDDIGIT_CURRENTDEGREE_INDEX, cdegree_leddigit % 100);
+  lcd_wrapper__write_leddigit(LCD_LEDDIGIT_REQUIREDDEGREE_INDEX, rdegree_leddigit % 100);
+}
+</pre>
+
+As we can see the <code>lcd_ui__update_ui</code> function was called periodically inside the 1Hz function. It updated the screen in real time based on the static values that were stored AND updated inside the LCD UI module.
+The Constant INDEX values stored were directly mapped onto the Index values were received from the 4DWorkshop UI Software.
 
 === Technical Challenges ===
 
-< List of problems and their detailed resolutions>
+*The GLCD needs to be supplied appropriate voltage (5V) at 1A for it to work properly. The LCD does not turn on without an appropriate power supply
+*The GLCD UART interface has an additional RES signal. This RES signal resets the GLCD when pulled low. When connecting the UART display it is recommended to always reset the GLCD display for proper working
+*The GLCD has a latency of up to 30ms when querying and receiving data. In our case, the real-time system has hard caps on time (i.e up to 1second of delay is possible on the 1Hz function)
+*This was rectified by putting the read functions (if any) inside the low priority 1Hz periodic_callback function.
+*Write operations do not suffer from such a latency issue since they only send one byte (ACK or NACK) signal back.
+*Fortunately most of our logic involved just a write (setting a value on the GLCD) rather than reading or querying the widget.
 
-<HR>
 <BR/>
 
 == '''Android Application''' ==
@@ -969,88 +1361,215 @@ Bridge functionality of the Bridge and Sensor Controller is to establish wireles
 === Software Design ===
 
 <div><ul> 
-<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android1.jpg|thumb|none|250px|Splash Screen]]</li>
-<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android2.jpg|thumb|none|250px|Main Activity Screen]] </li>
-<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android3.jpg|thumb|none|250px|Map Activity Screen]] </li>
-<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android4.jpg|thumb|none|250px|Info Activity Screen 1]] </li>
-<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android5.jpg|thumb|none|250px|Info Activity Screen 1]] </li>
-<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android6.jpg |thumb|none|250px|Debug Activity Screen]]</li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android4.jpg|thumb|none|220px|Info Activity (Top)]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android7.jpg|thumb|none|220px|Info Activity (Middle)]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android5.jpg|thumb|none|220px|Info Activity (Bottom)]] </li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster Truck_Android6.jpg |thumb|none|220px|Debug Activity Screen]]</li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster_Truck_Android_GIF1.gif|thumb|center|220px|App Animations]]</li>
+<li style="display: inline-block;">[[File:CMPE243_S20_T2_Canster_Truck_Android_GIF2.gif|thumb|center|220px|Live Location]]</li>
 </ul></div>
-
 The application consists of a total of 5 Activities:
 
-*'''Main Activity:'''
+=====Main Activity=====
 **This is the app launch display screen
 **It will check for all the required permission onStart().
 **Has search button for connecting from a paired device list view
 **Once device is clicked, an intent will start the Map Activity 
-*'''Map Activity:'''
-** For this requirement we are using the Google Maps Fragment, for the map fragment to function we must request an API key from Google and set the key in the manifest of the application.
-** Destination marker(Red Marker) is set using setOnMapClickListener to which the car will navigate to, the destination can be changed by clicking elsewhere on the Map Fragment. The marker can be removed using setOnMarkerClickListener.
-** When the start button is pressed, the start command identifier along with destination latitude and longitude is sent to the car via the write thread. A background thread is started along with it to indicate the current car's position(Green Marker) along with a plotline between the current position and destination.
-** When the stop button is pressed, the stop command identifier is sent to the car, to stop and turn off the car.
-*'''Info Activity:'''
-** Messages from Geological, Driver, Motor coming from CAN bus are decoded by the Sensor and Bridge controller and sent to the Android application as a string. 
-** The received string is parsed and categorizes the data to store it in the required textView to be displayed. 
-** Bluetooth status, Lidar Values, Ultrasonic Sensor Values, Motor Speed, Motor RPM, Motor PWM, Cars' current location, Compass Heading, Distance till Destination, Checkpoint Index is displayed. This was useful for debugging purposes and allowed us to avoid scanning the mounted LCD or CAN Busmaster on PC during drives.
-*'''Debug Activity:'''
-**The main function of this activity is to check all RAW RX and RAW TX messages and create a log of all the data received and sent. 
-*'''Bluetooth Connection Service Activity''' :
-**This is the background activity that handles all the threads required for transmission and receiving data using Bluetooth connections. It has 3 running threads which is called inside other activities using a handler:
-** Accept Thread - Listens to BluetoothServerSocket using listenUsingRfcommWithServiceRecord. In order for the RF communication socket to connect to the HC-05, we used the following UUID: 00001101-0000-1000-8000-00805F9B34FB. This is a generic SSP Bluetooth UUID that enables the socket to directly connected to HC-05 and maintain the connection.
-** Connect Thread - Creates a Bluetooth socket using createRfcommSocketToServiceRecord
-** Connected Thread - Creates socket.getInputStream(); and socket.getOutputStream(); when bytes are available in input stream it will read them into a buffer. 
-***All messages for activities are done by Handler mHandler.obtainMessage(); mHandler.sendMessage();
+=====Map Activity=====
+* For this requirement we are using the Google Maps Fragment, for the map fragment to function we must request an API key from Google and set the key in the manifest of the application.
+* Destination marker(Red Marker) is set using <code>setOnMapClickListener</code> to which the car will navigate to, the destination can be changed by clicking elsewhere on the Map Fragment. The marker can be removed using <code>setOnMarkerClickListener</code>.
+* When the start button is pressed, the start command identifier along with destination latitude and longitude is sent to the car via the write thread. A background thread is started along with it to indicate the current car's position(Green Marker) along with a plotline between the current position and destination.
+* When the stop button is pressed, the stop command identifier is sent to the car, to stop and turn off the car.
+=====Info Activity=====
+* Messages from Geological, Driver, Motor coming from CAN bus are decoded by the Sensor and Bridge controller and sent to the Android application as a string. 
+* The received string is parsed and categorizes the data to store it in the required textView to be displayed. 
+* Bluetooth status, Lidar Values, Ultrasonic Sensor Values, Motor Speed, Motor RPM, Motor PWM, Cars' current location, Compass Heading, Distance till Destination, Checkpoint Index is displayed. This was useful for debugging purposes and allowed us to avoid scanning the mounted LCD or CAN Busmaster on PC during drives.
+=====Debug Activity=====
+*The main function of this activity is to check all RAW RX and RAW TX messages and create a log of all the data received and sent. 
+=====Bluetooth Connection Service Activity=====
+*This is the background activity that handles all the threads required for transmission and receiving data using Bluetooth connections. It has 3 running threads which is called inside other activities using a handler:
+* Accept Thread - Listens to BluetoothServerSocket using listenUsingRfcommWithServiceRecord. In order for the RF communication socket to connect to the HC-05, we used the following <code>UUID: 00001101-0000-1000-8000-00805F9B34FB</code>. This is a generic SSP Bluetooth UUID that enables the socket to directly connected to HC-05 and maintain the connection.
+* Connect Thread - Creates a Bluetooth socket using createRfcommSocketToServiceRecord
+* Connected Thread - Creates socket.getInputStream(); and socket.getOutputStream(); when bytes are available in input stream it will read them into a buffer. 
+**All messages for activities are done by <code> Handler mHandler.obtainMessage(); mHandler.sendMessage(); </code>
 
-*'''Receieved string''':
-** A String is sent to the Bluetooth app from HC-05 and when it receives a string with identifier "$canster", the message is prased accordingly by using the string delimiter ',' and is ended by the newline character '\n' which will remove the data from StringBuffer.
-** Example: $canster,37.339334,-121.881123,37.338713,-121.880685,10.123,20.133,30.123,10.5,88.1,99.2,-2,1,44,7,11,22,33,-3,23\n
+'''Receieved string:'''
+* A String is sent to the Bluetooth app from HC-05 and when it receives a string with identifier "$canster", the message is prased accordingly by using the string delimiter ',' and is ended by the newline character '\n' which will remove the data from StringBuffer.
+* <code>Example: $canster,37.339334,-121.881123,37.338713,-121.880685,10.123,20.133,30.123,10.5,88.1,99.2,-2,1,44,7,11,22,33,-3,23\n</code>
 
+'''Manifest:'''
+<pre>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+</pre>
 
+'''Dependencies:'''
+<pre>
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    compile 'com.google.maps.android:android-maps-utils:0.4+'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+</pre>
 
 [[File:CMPE243_S20_T2_BLUETOOTHFLOWCHART.png|thumb|center|650px| Android Application Flowchart]]
 
 === Technical Challenges ===
+*'''Bluetooth Discovery:''' While creating the android application, we were not able to see any Bluetooth devices in the paired device list. The problem was that for the Android versions above Lillipop we would also need location access. We have solved it by writing a function to check whether to check for permissions or not.
+<pre>
+private void checkBluetoothPermissions() {
+        Log.d(TAG, "checkBTPermissions: Checking permissions");
+        int permission_check = this.checkSelfPermission("Manifest.permission.ACCESS_FINE_LOCATION");
+        permission_check += this.checkSelfPermission("Manifest.permission.ACCESS_COARSE_LOCATION");
+        if (permission_check != 0) {
+            this.requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1001); //Any number
+        }
+        else{
+            Log.d(TAG, "checkBTPermissions: No need to check permissions. SDK version < LOLLIPOP.");
+        }
+    }
+</pre>
+*'''Catching NULL in a StringTokenizer: ''' When sending data using Bluetooth sometimes thee app crashes. Using debug Run log in Android Studio IDE, we have found out that this is because we get <code> NullPointerException, java.util.StringTokenizer </code>  error. This is mainly due to passing a null value to the StringTokenizer constructor. This problem can be avoided by after reading a line from the Bluetooth StringBuffer, we check whether it is null, before passing it to the StringTokenizer, but later on, we have preferred to use <code>split();</code> to prase the received string as StringTokenizer is now a legacy class that is retained for compatibility reasons and its use is discouraged in new code.
 
-<HR>
+*'''XML Layouts: ''' Generating layouts is difficult for new android code developers, the design layouts made should be compatible for a wide range of mobile devices but using the new android libraries we have found that, the older phones then tend to have difficulty in showing the layouts correctly. We have solved this problem by learning the design commercial XML design layouts by following tutorials on Udemy and Youtube. 
+
+*'''Auto Connect''': During the first stages we have implemented Bluetooth connection via searching for all devices and clicking on the device from Listpair to connect. This has a lot of time to process all the discovered devices near range. To solve this we have hardcoded the HC-05 device address <code>00:14:03:06:02:83</code> to <code>mBluetoothAdapter.getRemoteDevice("device address")</code>.
+
+<BR/>
+
+== '''Management''' ==
+===Git Management===
+
+Git Management amongst 6 team members was definitely a very challenging task. Depending on our initial design we could’ve had a lot of merge conflicts. However those risks were mitigated by spending a LOT of time in the initial stages to decide our pipeline and structure.
+
+<li>There are certain components in our system that were COMMON. For example the CAN initialization, communication and decodes were all similar for the most part between all the 4 Controllers. The utility modules used were also similar in nature</li>
+<li>Thus we made a common branch that contained the templates for CAN Nodes (not Controllers), Hardware code and Utility functions.
+<ol>
+<li>Later this common branch was forked into an individual Controller specific branch (SENSOR, GEO, MOTOR or DRIVER).</li>
+<li>Only the Logic folder contained Controller specific code, specific to that controller.</li>
+</ol>
+<li>This gave us a lot of flexibility since all the team members had similar APIs to work with on all 4 branches. This promoted easy understanding and learning.
+<ol>
+<li>Many team members frequently worked on 2 or more controllers at a time where can messages were concerned. Having a APIs also meant that just the can_handler needed to be updated regularly followed by the equivalent logic code. </li>
+<li>Inside the logic folder, getters to the can node modules were frequently used.</li></ol>
+
+An example of how one of our initial templates was setup.
+<pre>
+├───can_module
+│   ├───can_bus_initializer
+│   ├───can_constants
+│   ├───can_driver_node
+│   ├───can_geo_node
+│   ├───can_handler
+│   ├───can_motor_node
+│   ├───can_sensor_node
+│   └───test
+├───hardware
+│   ├───bt
+│   ├───compass
+│   ├───gps
+│   ├───lcd
+│   ├───lidar
+│   ├───motor
+│   ├───test
+│   └───ultrasonic
+├───logic
+│   ├───driver_obstacle
+│   ├───driver_state
+│   ├───geo_logic
+│   └───test
+└───utility
+    ├───line_buffer
+    └───test
+</pre>
+
+'''Challenges'''
+<li>It was initially a bit of a learning curve to understand the flow of the repository</li>
+<li>When using a git management system with different versions in each branch it became very tough when the number of branches suddenly exploded in size. A lot of relevant code was stuck in a lot of different branches.
+<ol>
+<li>This happened mainly due to assignment submissions and unclosed MRs that eventually became stale.</li>
+<li>Our strategy was to abandon these MRs and keep forking from these branches without merging it back into its final controller branch.</li>
+<li>The latest branches that were kept were aptly named `<controller>_bleeding_edge_dev` branches since they were never merged back from where they were forked.</li>
+</ol>
+<li>Since a lot of our code also depended on the DBC autogenerated code, we could not suddenly change the DBC Message names once they were established since it caused a change in the Struct name that was generated and used.
+<ol>
+<li>Our solution to this was to keep everything backward compatible. We added new function names without deleting old DBC messages.</li>
+<li>In certain places where we wanted to modify a function name it was done one by one so that a lot of the code is not broken at one time.</li>
+</ol>
+<li>Common Branches eventually became stale as our progress continued on the bleeding edge branches
+<ol>
+<li>For example certain GPS features needed to be added which were done on the GEO_bleeding_edge_dev branch but never pushed or cherry-picked back into the COMMON branch.</li>
+<li>This was a similar issue to our 2nd point but manageable since the goal of the COMMON branch was to provide a template for further work and nothing more.</li>
+<li>At the end of the day each controller is its own Individual Project and while the messages between them are same. The Hardware code does not need to be same.</li>
+<li>This also prompted team-members to ask if we could delete unused hardware or logic file code (which wasn’t being used and was imported from the template). This was also fine and can be done during cleanup stage. However we eventually got used to the Modular system of our project so much so that we did not worry about the additional modules that were present in each branched controller project.</li>
+</ol>
+
 <BR/>
 
 == '''Conclusion''' ==
-CMPE243 gives one of the best experiences one could ever get in their academic life. The course is designed to give an insight into how the industry functions and enhances both technical and management skills. Apart from learning how to work and implement application of CAN protocol, one can get a hands-on experience with version control, unit-testing and software design. Overall it was a very great journey.
+CMPE243 gives one of the best experiences one could ever get in their academic life. The course is designed to give an insight into how the industry functions and enhances both technical and management skills. Apart from learning how to work and implement application of CAN protocol, one can get a hands-on experience with version control, unit-testing and software design. Overall it was a very great and memorable journey.
 
 === Project Video ===
 
+[https://youtu.be/zkTs8o7nB6k Youtube Video]
+
 === Project Source Code ===
+* [https://gitlab.com/coder137/can-ster_truck GitLab Link]
 
 === Advise for Future Students ===
 '''GENERAL:'''
 * Form your team and start the project as early as you can.
 * Clearly discuss what role each individual should do and ensure that progress is regularly tracked so that the team doesn't fall back on any schedule.
+* Make sure your early structure of the project is decided. Before you start to write the code make sure that all the team and code guidelines are discussed. In our case we spent most of our first week deciding how we wanted to structure and design our code. This paid off in the long run since we had robust code inside one repository that could be extended efficiently.
+* Make sure each module is individually testable i.e through periodic callbacks as well as unit-tests. While unit-tests can help for a lot of situations and provide a robust way to map the working of the module, it cannot simulate certain real-life scenarios. For example, Lidar buffer was constantly getting full due to the large number of incoming bytes. This caused us to have certain incorrect reading appear after a few minutes of the lidar running. Our solution was to minimize the <code>printf</code> statements inside the module that were used for debugging.
 * Since lot of code and hardware integration is involved with this project, make sure testing is thoroughly and periodically done and make note of all the issues found.
 '''HARDWARE:'''
-* Decide on how you would power up the peripherals. We had issues with Bluetooth (not connecting), GPS (lock not happening) and LIDAR (giving incorrect values). After lot of cycles of hardware and software debugging, we found that the issue was with power. Choose wisely as to which peripherals must be connected to which power bank.
-* PCB design is time consuming as there is a lot of hardware components involved and a huge responsibility falls on the designer to know the about each component. Coordinating with multiple team members and verifying with them if their respective hardware is correct takes a lot of time. So start well ahead.
+* Decide on how you would power up the peripherals. We had issues with Bluetooth (not connecting), GPS (lock not happening) and LIDAR (giving incorrect values). After lot of cycles of hardware and software debugging, we found that the issue was with power. Choose wisely as to which peripherals must be connected to which power source.
+* Isolate the power hungry devices to other parallel connections so that the voltage drop is not high. In our case the Graphical LCD and LIDAR were both very power hungry peripherals. The LCD used to start glitching incase there was a large voltage drop and the LIDAR used to give incorrect values or not update correctly. We solved this issue by giving the lidar a dedicated power supply.
+* PCB design involves lot of hardware components. Coordinating with multiple team members and verifying each hardware connection takes quite some time. So start well ahead.
 * Make sure to expose some extra GPIO and GND pins for future use.
+'''MOTOR:'''
+* You can use the LiPo battery to power the RPM and servo motor instead of using a separate power source. Use Vout from the ESC to get 6V.
+* Start the PID control calibration early on as you will need to do extensive testing to get it working.
 
 === Acknowledgement ===
 <HR>
 Firstly we would like to express our gratitude to Professor Preetpal Kang for his guidance throughout the semester and providing us with this opportunity. We would also like to thank the ISA members Vignesh Kumar Venkateshwar and Aakash Vrajlal Chitroda for being available whenever in need and guiding us to complete the project.
 
 == '''References''' ==
+* CAN Reference [https://www.kvaser.com/about-can/can-dictionary/]
+* FreeRTOS Reference [http://socialledge.com/sjsu/index.php/FreeRTOS_Tutorial]
+* Git tutorial [http://socialledge.com/sjsu/index.php/Basic_Git_Tutorial]
+* Unit-test reference [https://gitlab.com/sibros_public/public/-/wikis/c/unit_tests#lab-1]
+* Getting started with SJ-Two [https://sjsu-dev2.readthedocs.io/en/latest/getting_started/getting_started/]
 
 ===Motor Controller===
+* Traxxas User Manual: [https://images-na.ssl-images-amazon.com/images/I/D1NTpa7RNES.pdf]
+* Traxxas Specification Sheet: [https://images-na.ssl-images-amazon.com/images/I/81WphBAuwIL.pdf]
 
 ===Geological Controller===
-* Movable Scripts: [https://www.movable-type.co.uk/scripts/latlong.html Calculate distance, bearing and more between Latitude/Longitude points]]
+* Movable Scripts (Calculate distance, bearing and more between Latitude/Longitude points): [https://www.movable-type.co.uk/scripts/latlong.html]
+* CMPS11 (I2C Configuration): [https://www.robot-electronics.co.uk/htm/cmps11i2c.htm]
 
 ===Bridge and Sensor Controller===
-
+* [https://www.slamtec.com/en/Lidar/A1 LIDAR]
+* [https://components101.com/ultrasonic-sensor-working-pinout-datasheet Ultrasonic sensor ]
 ===Driver and LCD Controller===
-
+* LCD Software: [https://4dsystems.com.au/ulcd-32ptu 4Dsystems]
 ===Android===
-*Youtube Channel: [https://www.youtube.com/channel/UCoNZZLhPuuRteu02rh7bzsw Coding with Mitch]
-*Android Developers: [https://developer.android.com/guide/topics/connectivity/bluetooth Website][https://github.com/googlearchive/android-BluetoothChat Github]
-*Udemy Course: [https://www.udemy.com/course/the-complete-android-oreo-developer-course/ Complete Android Oreo Developer Course]
-
+* Youtube Channel: [https://www.youtube.com/channel/UCoNZZLhPuuRteu02rh7bzsw Coding with Mitch]
+* Android Developers: [https://developer.android.com/guide/topics/connectivity/bluetooth Website][https://github.com/googlearchive/android-BluetoothChat Github]
+* Udemy Course: [https://www.udemy.com/course/the-complete-android-oreo-developer-course/ Complete Android Oreo Developer Course]
 ===PCB Design===
-*EDC Tool: [https://easyeda.com/ EasyEDA]
+* Design Tool: [https://easyeda.com/ EasyEDA]
+
