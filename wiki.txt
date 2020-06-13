@@ -1572,4 +1572,3 @@ Firstly we would like to express our gratitude to Professor Preetpal Kang for hi
 * Udemy Course: [https://www.udemy.com/course/the-complete-android-oreo-developer-course/ Complete Android Oreo Developer Course]
 ===PCB Design===
 * Design Tool: [https://easyeda.com/ EasyEDA]
-
